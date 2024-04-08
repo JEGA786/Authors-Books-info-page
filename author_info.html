@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Information</title>
+<link rel="stylesheet" href="/authors.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container d-flex flex-column align-items-center py-4 pb-5">
+    <h2>Author Information</h2>
+    <div id="authorInfo" class="d-flex gap-lg-5 gap-3 mt-lg-0 mt-4 text-lg-start text-center  flex-wrap  justify-content-center align-items-center">
+        <!-- Author image and title will be dynamically added here -->
+    </div>
+    <h4 class="author-book-heading mt-4 text-dark"></h4>
+    <div class="book-img mt-5"></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get('title');
+    const image = urlParams.get('image');
+  
+    const descriptions = {
+        "Alia Almoayed": "Alia Almoayed is a Nutritional Therapist running a busy nutrition consultancy in the Kingdom of Bahrain, offering nutrition advice to the Middle East community and beyond.  She writes health articles for various publications, runs TV and radio programmes on health and nutrition, holds lectures and seminars on the subject, and heads a number of weight loss projects.  Alia is the author of I Want Healthy Kids, a book on how to raise healthy children, The Dream Body Eating Plan, a weight loss guide, and I Want a Healthy Pregnancy, a book on how to enjoy natural pregnancy and childbirth; she is also co-author of 101 Ways To Improve Your Health.<br><p class='mt-2'>Alia hosts DARE TO BE HEALTHY, an internet health show on www.DareToBeHealthy.com and runs an active blog on www.AliaAlmoayedBlog.com.  For more information, to book appointments, to get regular email health tips, or to request Alia’s special FREE Report entitled: 5 Secrets Your Doctor Won’t Tell You About Your Health, visit <a> http://www.AliaAlmoayed.com </a> .</p>",
+        "Atoine D.Moss": "Since 2006 Antoine has been employed by NASA Glenn Research Center where he once helped design an innovative leadership development program for NASA's employees. Antoine initially stared working with NASA as an intern, but subsequently landed a full-time job with NASA as a result of his stellar high performance during his internship.<br><p class='mt-2'>Over the years Antoine has been privileged to develop a powerful network of highly successful professionals. His network of high performers is comprised of astronauts, millionaires, U.S. Congressional officials, FBI agents, famous celebrities, past NBA & NFL players, doctors, authors, senior executives, and national business moguls. From these transformational encounters Antoine learned and intensely continues to study the attributes of high performance, and he began to put his knowledge into practice to achieve extraordinary success. As a result, Antoine created his high performance C.E.O. Maximum Achievement System that empowers young professionals to accelerate personal achievement, career advancement, and leadership capabilities.</p>",
+        // "Atoine D.Moss": "Learn to Intern CEO Style shows you how to develop and shape your CEO skills and attitude through internships, written by a student currently completing his eighth world-class internship.Antoine Moss developed the <span class='fw-bold'> Creator of Excellent Opportunities </span> (CEO) internship style framework from his fascinating, once-in-a-life time experiences. He has interned on Capitol Hill, with the FBI, and NASA. Moss co-interned with celebrities and played an integral role in solving a federal law enforcement case. This book will help students and young professionals stand out in today’s overcrowded job market so they can land the job of their dreams! <br> <p class='mt-2'> Learn to Intern CEO Style is an essential guide for enterprising students trying to break into a career at all levels of government and business organizations. This book is a genuine and honest look at what to do, and more importantly, what not to do in the world of internships. What Moss has created is a handy book with a mix of authentic stories about being in the trenches coupled with practical <span class='fw-bold'> how-to advice. An invaluable addition to your personal library! <br><p class='mt-2'> Mayor Luke Ravenstahl, City of Pittsburgh Mayor Ravenstahl, 29-years-old, youngest mayor of any major U.S. city</p>",
+        "venu": "Description for Venu",
+        "pal": "Description for Pal",
+        "jegan": "Description for Jegan"
+    };
+
+    const authorInfoDiv = document.getElementById("authorInfo");
+    if (title && image) {
+        // Create a div for the author image
+        const imageDiv = document.createElement("div");
+        imageDiv.classList.add("author_img");
+        const imageElement = document.createElement("img");
+        imageElement.src = image;
+        imageElement.alt = title;
+        imageDiv.appendChild(imageElement);
+        authorInfoDiv.appendChild(imageDiv);
+
+        // Set the content of .author-book-heading div
+        const authorBookHeadingDiv = document.querySelector(".author-book-heading");
+        authorBookHeadingDiv.textContent = title + " Book";
+
+        // Create a div for the author details
+        const detailsDiv = document.createElement("div");
+        detailsDiv.classList.add("author_details", "px-3");
+        const titleParagraph = document.createElement("p");
+        titleParagraph.classList.add("title", "text-dark", "fw-bold", "fs-5");
+        titleParagraph.textContent = title;
+        detailsDiv.appendChild(titleParagraph);
+
+        // Add description paragraph corresponding to the title
+        const descriptionParagraph = document.createElement("p");
+descriptionParagraph.classList.add("author-description", "mt-3");
+descriptionParagraph.innerHTML = descriptions[title] || "Description not available";
+detailsDiv.appendChild(descriptionParagraph);
+
+        // Add social media links
+        const socialMediaDiv = document.createElement("div");
+        socialMediaDiv.classList.add("social_media", "mt-4");
+        if (title === "Alia Almoayed") {
+            socialMediaDiv.innerHTML = `
+            <a href="https://aliaalmoayed.com/"><i class="fa-solid fa-globe"></i></a>
+            <a href=" https://www.facebook.com/alia.almoayed.5 "><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/aliaalmoayed/"><i class="fa-brands fa-instagram"></i></a>
+            <a href=" https://twitter.com/aliaalmoayed"><i class="fa-brands fa-x-twitter"></i></a>
+            `;
+        } else if (title === "Atoine D.Moss") {
+            socialMediaDiv.innerHTML = `
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+            `;
+        } else if (title === "venu") {
+            socialMediaDiv.innerHTML = `
+            <a href="/venu/facebook"><i class="fa fa-facebook"></i></a>
+            <a href="/venu/instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="/venu/twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="/venu/linkedin"><i class="fa-solid fa-globe"></i></a>
+            `;
+        }
+        
+        detailsDiv.appendChild(socialMediaDiv);
+
+        authorInfoDiv.appendChild(detailsDiv);
+        
+        // Add image to .book-img div based on author
+        const bookImgDiv = document.querySelector(".book-img");
+        if (title === "Alia Almoayed") {
+            bookImgDiv.innerHTML = `<a href="books_info.html?bookImage=/images/author-book.png"><img id="book-img" src="/images//healthy-pregnancy book.png.png" alt="book name"></a>`;
+        } else if (title === "Atoine D.Moss") {
+            bookImgDiv.innerHTML = `<a href="/books_info.html?bookImage=/images/CEO book.png"><img id="book-img" src="/images/CEO book.png" alt="book name"></a>`;
+        } else if (title === "venu") {
+            bookImgDiv.innerHTML = `<a href="books_info.html?bookImage=/images/author-img.png"><img id="book-img" src="/images/author-img.png" alt="book name"></a>`;
+        }
+    } else {
+        const p = document.createElement("p");
+        p.textContent = "Author information not found.";
+        authorInfoDiv.appendChild(p);
+    }
+});
+</script>
+</body>
+</html>
