@@ -95,14 +95,26 @@ detailsDiv.appendChild(descriptionParagraph);
         authorInfoDiv.appendChild(detailsDiv);
         
         // Add image to .book-img div based on author
-        const bookImgDiv = document.querySelector(".book-img");
-        if (title === "Alia Almoayed") {
-            bookImgDiv.innerHTML = `<a href="books_info.html?bookImage=/images//healthy-pregnancy book.png"><img id="book-img" src="/images//healthy-pregnancy book.png" alt="book name"></a>`;
-        } else if (title === "Atoine D.Moss") {
-            bookImgDiv.innerHTML = `<a href="/books_info.html?bookImage=/images/CEO book.png"><img id="book-img" src="/images/CEO book.png" alt="book name"></a>`;
-        } else if (title === "venu") {
-            bookImgDiv.innerHTML = `<a href="books_info.html?bookImage=/images/author-img.png"><img id="book-img" src="/images/author-img.png" alt="book name"></a>`;
-        }
+const bookImgDiv = document.querySelector(".book-img");
+if (title === "Alia Almoayed") {
+    bookImgDiv.innerHTML = `
+        <a href="books_info.html?bookImage=/images//healthy-pregnancy book.png">
+            <img id="book-img" src="/images//healthy-pregnancy book.png" alt="pregnancy book">
+        </a>
+        <p class="book-name">Healthy Pregnancy Book</p>`;
+} else if (title === "Atoine D.Moss") {
+    bookImgDiv.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/CEO book.png">
+            <img id="book-img" src="/images/CEO book.png" alt="CEO book">
+        </a>
+        <div>CEO Book</div>`;
+} else if (title === "venu") {
+    bookImgDiv.innerHTML = `
+        <a href="books_info.html?bookImage=/images/author-img.png">
+            <img id="book-img" src="/images/author-img.png" alt="author book">
+        </a>
+        <div>Author's Book</div>`;
+}
     } else {
         const p = document.createElement("p");
         p.textContent = "Author information not found.";

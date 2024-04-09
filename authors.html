@@ -24,7 +24,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 </head>
 <body>
 
-<div id="contentContainer" class="container mt-5">
+<div id="contentContainer" class="container mt-5 ">
   <div class="d-flex justify-content-center col-12 row px-0  py-4 ">
     <h4 class="d-flex heading justify-content-lg-end justify-content-center col-lg-6 col-md-6 col-12">Our Authors</h4>
     <div class="search-div d-flex  justify-content-lg-end justify-content-center align-items-center col-lg-5 col-md-5 col-12 ">
@@ -37,7 +37,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
   <div class="no-items text-center" id="noItemsMessage" style="display: none;">Please Enter Our Correct Author name</div>
 </div>
 
-<div class="pagination d-flex justify-content-center align-items-center mt-5" id="pagination">
+<div class="pagination d-flex justify-content-center align-items-center mt-5 mb-5" id="pagination">
   <!-- Pagination buttons will be dynamically added here -->
 </div>
 
@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="author">
          <div class="author-img-div"> <img  src="${item.image}" alt="${item.title}"></div>
           <div class="item-content">
-            <p class="title text-dark fw-bold fs-5 mt-2">${item.title}</p>
+            <p class="title text-dark fw-bold  mt-2 author-name">${item.title}</p>
           </div>
-          <div class="mt-2 text-dark p-0 m-0">Get To Know
+          <div class="mt-2 text-dark p-0 m-0 get-to-know ">Get To Know
             <i class="fa fa-arrow-circle-right fs-5 "></i>
           </div>
           </div>
@@ -115,7 +115,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add previous button
     const prevButton = document.createElement("button");
-    prevButton.textContent = "Previous";
+    prevButton.textContent = "<";
+   
     prevButton.addEventListener("click", function() {
       if (currentPage > 1) {
         currentPage--;
@@ -127,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add next button
     const nextButton = document.createElement("button");
-    nextButton.textContent = "Next";
+    nextButton.textContent = ">";
     nextButton.addEventListener("click", function() {
       if (currentPage < totalPages) {
         currentPage++;

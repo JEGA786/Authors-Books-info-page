@@ -19,10 +19,25 @@
 font-size: 25px;
 font-weight: 600 !important;
   }
+.author-name , .get-to-know .fa{
 
-  p{
+  font-size: 17px !important;
+font-weight: 600 !important;
+}
+.book-name{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 17px !important;
+font-weight: 600 !important;
+}
+  .paragraph{
+    line-height: 23px;
     font-size: 14px
   }
+  .get-to-know{
+    font-size: 15px;
+  }
+  
   
   input{
     min-width: 250px;
@@ -32,8 +47,25 @@ font-weight: 600 !important;
   
   a:link {
     text-decoration: none!important;
+  
   }
   
+  .pagination button{
+    background:var(--primary-color);
+    border: none;
+    min-width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    font-weight: 700 !important;
+    transition: all 0.5s ease-in-out;
+  }
+  .pagination button:hover{
+  background:var(--primary-light);
+  box-shadow: 0 0 15px #e1b070;
+  border: 1px var(--primary-color) solid;
+  transform: scale(1.07);
+  }
+
   .item-container {
     margin-bottom: 20px;
     display: flex;
@@ -226,6 +258,8 @@ font-weight: 600;
 }
 
 .see-all{
+color: var(--text-color-white);
+font-weight: 500;
 min-width:120px;
 padding: 7px;
 border-radius: 5px;
@@ -234,9 +268,32 @@ border: none !important;
 transition: all 1s ease-in-out;
 }
 .see-all:hover{
+ color: #000;
   background:transparent;
   border: solid 1px  #FF9000 !important;
   box-shadow: 0 0 15px  #FF9000;;
   }
 
+/* ------------------------------media-quary--------------------------------- */
+@media screen and (max-width:680px) {
+  .slide {
+    width: 170px;
+    height: 200px;
+    position: relative;
+  }
+
+  .item .author-img-div{
+    width: 280px;
+    height: 320px;
+   
+  }
+  .slide-track {
+    display: flex;
+    width: calc(170px * 30);
+    animation: scroll 53s linear infinite;
+  }
+  .item ,.home-authors {
+   gap: 20px !important;
   
+  }
+}
