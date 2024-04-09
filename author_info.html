@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container d-flex flex-column align-items-center py-4 pb-5">
-    <h2>Author Information</h2>
+    <h2 class="heading">Author Information</h2>
     <div id="authorInfo" class="d-flex gap-lg-5 gap-3 mt-lg-0 mt-4 text-lg-start text-center  flex-wrap  justify-content-center align-items-center">
         <!-- Author image and title will be dynamically added here -->
     </div>
@@ -29,9 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const descriptions = {
         "Alia Almoayed": "Alia Almoayed is a Nutritional Therapist running a busy nutrition consultancy in the Kingdom of Bahrain, offering nutrition advice to the Middle East community and beyond.  She writes health articles for various publications, runs TV and radio programmes on health and nutrition, holds lectures and seminars on the subject, and heads a number of weight loss projects.  Alia is the author of I Want Healthy Kids, a book on how to raise healthy children, The Dream Body Eating Plan, a weight loss guide, and I Want a Healthy Pregnancy, a book on how to enjoy natural pregnancy and childbirth; she is also co-author of 101 Ways To Improve Your Health.<br><p class='mt-2'>Alia hosts DARE TO BE HEALTHY, an internet health show on www.DareToBeHealthy.com and runs an active blog on www.AliaAlmoayedBlog.com.  For more information, to book appointments, to get regular email health tips, or to request Alia’s special FREE Report entitled: 5 Secrets Your Doctor Won’t Tell You About Your Health, visit <a> http://www.AliaAlmoayed.com </a> .</p>",
         "Atoine D.Moss": "Since 2006 Antoine has been employed by NASA Glenn Research Center where he once helped design an innovative leadership development program for NASA's employees. Antoine initially stared working with NASA as an intern, but subsequently landed a full-time job with NASA as a result of his stellar high performance during his internship.<br><p class='mt-2'>Over the years Antoine has been privileged to develop a powerful network of highly successful professionals. His network of high performers is comprised of astronauts, millionaires, U.S. Congressional officials, FBI agents, famous celebrities, past NBA & NFL players, doctors, authors, senior executives, and national business moguls. From these transformational encounters Antoine learned and intensely continues to study the attributes of high performance, and he began to put his knowledge into practice to achieve extraordinary success. As a result, Antoine created his high performance C.E.O. Maximum Achievement System that empowers young professionals to accelerate personal achievement, career advancement, and leadership capabilities.</p>",
+        "Alex Rodriguez": "Born and raised in the Chicagoland area, Alex Rodriguez grew up inspired by action-packed stories of science fiction and the adventures of superheroes. She graduated with a Bachelor's degree in Psychology.<br><p class='mt-2'>Now a Wisconsin resident, Alex enjoys spending time with family and friends, walking her dog Titan, attending writing classes, and discovering new books/TV shows to fall in love with. </p>",
         // "Atoine D.Moss": "Learn to Intern CEO Style shows you how to develop and shape your CEO skills and attitude through internships, written by a student currently completing his eighth world-class internship.Antoine Moss developed the <span class='fw-bold'> Creator of Excellent Opportunities </span> (CEO) internship style framework from his fascinating, once-in-a-life time experiences. He has interned on Capitol Hill, with the FBI, and NASA. Moss co-interned with celebrities and played an integral role in solving a federal law enforcement case. This book will help students and young professionals stand out in today’s overcrowded job market so they can land the job of their dreams! <br> <p class='mt-2'> Learn to Intern CEO Style is an essential guide for enterprising students trying to break into a career at all levels of government and business organizations. This book is a genuine and honest look at what to do, and more importantly, what not to do in the world of internships. What Moss has created is a handy book with a mix of authentic stories about being in the trenches coupled with practical <span class='fw-bold'> how-to advice. An invaluable addition to your personal library! <br><p class='mt-2'> Mayor Luke Ravenstahl, City of Pittsburgh Mayor Ravenstahl, 29-years-old, youngest mayor of any major U.S. city</p>",
-        "venu": "Description for Venu",
-        "pal": "Description for Pal",
+       
+        "Brandi Parsons": "Brandi Parsons has been interested in social justice issues for more than two decades. Kidnapped Asylum is her debut book which she hopes will shed some light on the complicated issue of immigration in the United States. She currently lives in Cedar Rapids, Iowa with her family",
         "jegan": "Description for Jegan"
     };
 
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         detailsDiv.appendChild(titleParagraph);
 
         // Add description paragraph corresponding to the title
-        const descriptionParagraph = document.createElement("p");
+const descriptionParagraph = document.createElement("p");
 descriptionParagraph.classList.add("author-description", "mt-3");
 descriptionParagraph.innerHTML = descriptions[title] || "Description not available";
 detailsDiv.appendChild(descriptionParagraph);
@@ -81,12 +82,18 @@ detailsDiv.appendChild(descriptionParagraph);
             <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="#"><i class="fa-solid fa-globe"></i></a>
             `;
-        } else if (title === "venu") {
+        } else if (title === "Alex Rodriguez") {
             socialMediaDiv.innerHTML = `
-            <a href="/venu/facebook"><i class="fa fa-facebook"></i></a>
-            <a href="/venu/instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="/venu/twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="/venu/linkedin"><i class="fa-solid fa-globe"></i></a>
+            <a href="https://www.facebook.com/alexrdtwriter"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/alexrdt_writes/ "><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.goodreads.com/author/show/22053460.Alex_Rodriguez"><i class="fa-brands fa-goodreads"></i></a>
+            `;
+        } else if (title === "Brandi Parsons") {
+            socialMediaDiv.innerHTML = `
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
             `;
         }
         
@@ -107,7 +114,7 @@ if (title === "Alia Almoayed") {
         <a href="/books_info.html?bookImage=/images/CEO book.png">
             <img id="book-img" src="/images/CEO book.png" alt="CEO book">
         </a>
-        <div>CEO Book</div>`;
+        <div class="book-name">CEO Book</div>`;
 } else if (title === "venu") {
     bookImgDiv.innerHTML = `
         <a href="books_info.html?bookImage=/images/author-img.png">

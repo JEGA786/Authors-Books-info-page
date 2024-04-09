@@ -12,15 +12,23 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
-    .author-book-img{
-  width: 289px !important;
-  height: 448px;
-  border-radius: 5px;
-}
-.author-book-img img{
-    width: 100%;
- object-fit: cover;
-}
+    .author-book-img {
+        width: 289px !important;
+        height: 448px;
+        border-radius: 5px;
+    }
+
+    .author-book-img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .buttons-container {
+        /* display: none; */
+        margin-top: 20px;
+        
+
+    }
 </style>
 </head>
 
@@ -28,8 +36,8 @@
 <body>
 <div class="container d-flex flex-column align-items-center py-4 pb-5">
     <h2>Books Information</h2>
-    <div id="author-book-img" class="author-book-img"></div> 
-    <div class="buttons"></div>
+    <div id="author-book-img" class="author-book-img"></div>
+    <div class=" gap-5 buttons-container d-flex justify-content-around " id="buttons-container"></div>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -40,17 +48,50 @@ document.addEventListener("DOMContentLoaded", function() {
     const authorBookImgDiv = document.getElementById("author-book-img");
     authorBookImgDiv.innerHTML = `<img id="book-img" src="${bookImage}" alt="Book Image">`;
 
-    // Add click event listener to book image
-    const bookImg = document.getElementById("book-img");
-    bookImg.addEventListener("click", function() {
-        // Clone the book image
-        const clonedBookImg = bookImg.cloneNode(true);
-        // Clear the author-book-img div
-        authorBookImgDiv.innerHTML = '';
-        // Append the cloned book image
-        authorBookImgDiv.appendChild(clonedBookImg);
-    });
+    // Show buttons container
+    const buttonsContainer = document.getElementById("buttons-container");
+    buttonsContainer.style.display = "block";
+
+    // Call function to populate buttons
+    populateButtons(bookImage);
 });
+
+// Function to populate buttons based on the book image clicked
+// Function to populate buttons based on the book image clicked
+function populateButtons(imageSrc) {
+    // Clear previous buttons
+    const buttonsContainer = document.getElementById("buttons-container");
+    buttonsContainer.innerHTML = '';
+
+    // Define button labels and links based on the book type
+    let buttonInfo;
+    if (imageSrc.includes('healthy-pregnancy')) {
+        buttonInfo = [
+            { label: "Button 1", link: "https://example.com/button1" },
+            { label: "Button 2", link: "https://example.com/button2" },
+            { label: "Button 3", link: "https://example.com/button3" },
+            { label: "Button 4", link: "https://example.com/button4" },
+            { label: "Button 5", link: "https://example.com/button5" }
+        ];
+    } else if (imageSrc.includes('CEO')) {
+        buttonInfo = [
+            { label: "Button A", link: "https://example.com/buttonA" },
+            { label: "Button B", link: "https://example.com/buttonB" },
+            { label: "Button C", link: "https://example.com/buttonC" },
+            { label: "Button D", link: "https://example.com/buttonD" }
+        ];
+    }
+
+    // Create links and append them to the container
+    if (buttonInfo) {
+        buttonInfo.forEach(info => {
+            const link = document.createElement('a');
+            link.textContent = info.label;
+            link.href = info.link;
+            buttonsContainer.appendChild(link);
+        });
+    }
+}
 </script>
 </body>
 </html>
