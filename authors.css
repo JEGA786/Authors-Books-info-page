@@ -7,13 +7,13 @@
   --primary-light:#ffc06e;
   --secosecondary-color:#38B5B6;
   --secosecondary-light-color:#f1fff7;
-  --text-color-black:#15141400;
+  --text-color-black:rgb(24, 24, 24);
   --text-color-white:rgb(239, 239, 239);
   }
   
   body{
     background:var(--secosecondary-light-color) !important;
-    font-family: "Lato", sans-serif;
+    font-family: "Lato", "sans-serif";
   }
   .heading{
 font-size: 28px;
@@ -155,7 +155,7 @@ font-weight: 600 !important;
     min-height: 600px;
 }
 .author_img{
-    background: #000;
+    background:var(--text-color-black);
     width: 400px;
     height: 500px;
     border-radius: 300px !important;
@@ -198,17 +198,7 @@ font-weight: 600 !important;
   background-color: var(--primary-light);
   display: block;
 }
-.book-img{
-  background: #000;
-  width: 289px;
-  height: 448px;
-  border-radius: 5px;
-}
-.book-img a img{
-  width: 100% !important;
-  border-radius: 5px;
-  object-fit: cover !important;
-}
+
 
 /* -------------------------------------author-home-------------------------- */
 .slider {
@@ -257,22 +247,30 @@ font-weight: 600;
   opacity: 1;
 }
 
-.see-all{
-color: var(--text-color-white);
-font-weight: 500;
-min-width:120px;
+.see-all,.buttons a{
+  text-align: center;
+  color:var(--text-color-black) !important;
+font-weight: 550;
+min-width:100px;
+/* min-height:100px; */
 padding: 7px;
 border-radius: 5px;
 background: var(--primary-color);
 border: none !important;
-transition: all 1s ease-in-out;
+transition: all 0.5s ease-in-out;
 }
-.see-all:hover{
- color: #000;
-  background:transparent;
-  border: solid 1px  #FF9000 !important;
-  box-shadow: 0 0 15px  #FF9000;;
+.see-all:hover,.buttons a:hover{
+  /* color: var(--primary-color) !important; */
+  background:var(--primary-light);
+  /* border: solid 1px  #FF9000 !important; */
+  /* box-shadow: 0 0 15px  #FF9000;; */
   }
+
+
+  /*----------------------------- books-information-------------------------- */
+ .buttonInfo{
+  background: #000;
+ }
 
 /* ------------------------------media-quary--------------------------------- */
 @media screen and (max-width:680px) {

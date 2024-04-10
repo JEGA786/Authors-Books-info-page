@@ -1,133 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Author Information</title>
-<link rel="stylesheet" href="/authors.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container d-flex flex-column align-items-center py-4 pb-5">
-    <h2 class="heading">Author Information</h2>
-    <div id="authorInfo" class="d-flex gap-lg-5 gap-3 mt-lg-0 mt-4 text-lg-start text-center  flex-wrap  justify-content-center align-items-center">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Author Information</title>
+    <link rel="stylesheet" href="/authors.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .book-img-1,
+      .book-img-2 {
+        background: #000;
+        width: 289px;
+        height: 448px;
+        border-radius: 5px;
+      }
+      .book-img a img {
+        width: 100% !important;
+        border-radius: 5px;
+        object-fit: cover !important;
+      }
+      .bookname {
+        color: var(--primary-color);
+      }
+      .book-img-2 {
+        display: none; /* Hide bookImgDiv2 by default */
+      }
+    </style>
+    <div class="container d-flex flex-column align-items-center py-4 pb-5">
+      <h2 class="heading">Author Information</h2>
+      <div
+        id="authorInfo"
+        class="d-flex gap-lg-5 gap-3 mt-lg-0 mt-4 text-lg-start text-center flex-wrap justify-content-center align-items-center"
+      >
         <!-- Author image and title will be dynamically added here -->
+      </div>
+      <h4 class="author-book-heading mt-4 text-dark"></h4>
+      <div
+        class="book-img mt-5 d-flex gap-5 flex-wrap justify-content-center align-items-center"
+      >
+        <div class="book-img-1"></div>
+        <div class="book-img-2"></div>
+      </div>
     </div>
-    <h4 class="author-book-heading mt-4 text-dark"></h4>
-    <div class="book-img mt-5"></div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const title = urlParams.get('title');
-    const image = urlParams.get('image');
-  
-    const descriptions = {
-        "Alia Almoayed": "Alia Almoayed is a Nutritional Therapist running a busy nutrition consultancy in the Kingdom of Bahrain, offering nutrition advice to the Middle East community and beyond.  She writes health articles for various publications, runs TV and radio programmes on health and nutrition, holds lectures and seminars on the subject, and heads a number of weight loss projects.  Alia is the author of I Want Healthy Kids, a book on how to raise healthy children, The Dream Body Eating Plan, a weight loss guide, and I Want a Healthy Pregnancy, a book on how to enjoy natural pregnancy and childbirth; she is also co-author of 101 Ways To Improve Your Health.<br><p class='mt-2'>Alia hosts DARE TO BE HEALTHY, an internet health show on www.DareToBeHealthy.com and runs an active blog on www.AliaAlmoayedBlog.com.  For more information, to book appointments, to get regular email health tips, or to request Alia’s special FREE Report entitled: 5 Secrets Your Doctor Won’t Tell You About Your Health, visit <a> http://www.AliaAlmoayed.com </a> .</p>",
-        "Atoine D.Moss": "Since 2006 Antoine has been employed by NASA Glenn Research Center where he once helped design an innovative leadership development program for NASA's employees. Antoine initially stared working with NASA as an intern, but subsequently landed a full-time job with NASA as a result of his stellar high performance during his internship.<br><p class='mt-2'>Over the years Antoine has been privileged to develop a powerful network of highly successful professionals. His network of high performers is comprised of astronauts, millionaires, U.S. Congressional officials, FBI agents, famous celebrities, past NBA & NFL players, doctors, authors, senior executives, and national business moguls. From these transformational encounters Antoine learned and intensely continues to study the attributes of high performance, and he began to put his knowledge into practice to achieve extraordinary success. As a result, Antoine created his high performance C.E.O. Maximum Achievement System that empowers young professionals to accelerate personal achievement, career advancement, and leadership capabilities.</p>",
-        "Alex Rodriguez": "Born and raised in the Chicagoland area, Alex Rodriguez grew up inspired by action-packed stories of science fiction and the adventures of superheroes. She graduated with a Bachelor's degree in Psychology.<br><p class='mt-2'>Now a Wisconsin resident, Alex enjoys spending time with family and friends, walking her dog Titan, attending writing classes, and discovering new books/TV shows to fall in love with. </p>",
-        // "Atoine D.Moss": "Learn to Intern CEO Style shows you how to develop and shape your CEO skills and attitude through internships, written by a student currently completing his eighth world-class internship.Antoine Moss developed the <span class='fw-bold'> Creator of Excellent Opportunities </span> (CEO) internship style framework from his fascinating, once-in-a-life time experiences. He has interned on Capitol Hill, with the FBI, and NASA. Moss co-interned with celebrities and played an integral role in solving a federal law enforcement case. This book will help students and young professionals stand out in today’s overcrowded job market so they can land the job of their dreams! <br> <p class='mt-2'> Learn to Intern CEO Style is an essential guide for enterprising students trying to break into a career at all levels of government and business organizations. This book is a genuine and honest look at what to do, and more importantly, what not to do in the world of internships. What Moss has created is a handy book with a mix of authentic stories about being in the trenches coupled with practical <span class='fw-bold'> how-to advice. An invaluable addition to your personal library! <br><p class='mt-2'> Mayor Luke Ravenstahl, City of Pittsburgh Mayor Ravenstahl, 29-years-old, youngest mayor of any major U.S. city</p>",
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get("title");
+        const image = urlParams.get("image");
+
+        const descriptions = {
+          "Alia Almoayed":
+            "Alia Almoayed is a Nutritional Therapist running a busy nutrition consultancy in the Kingdom of Bahrain, offering nutrition advice to the Middle East community and beyond.  She writes health articles for various publications, runs TV and radio programmes on health and nutrition, holds lectures and seminars on the subject, and heads a number of weight loss projects.  Alia is the author of I Want Healthy Kids, a book on how to raise healthy children, The Dream Body Eating Plan, a weight loss guide, and I Want a Healthy Pregnancy, a book on how to enjoy natural pregnancy and childbirth; she is also co-author of 101 Ways To Improve Your Health.<br><p class='mt-2'>Alia hosts DARE TO BE HEALTHY, an internet health show on www.DareToBeHealthy.com and runs an active blog on www.AliaAlmoayedBlog.com.  For more information, to book appointments, to get regular email health tips, or to request Alia’s special FREE Report entitled: 5 Secrets Your Doctor Won’t Tell You About Your Health, visit <a> http://www.AliaAlmoayed.com </a> .</p>",
+          "Antoine D.Moss":
+            "Since 2006 Antoine has been employed by NASA Glenn Research Center where he once helped design an innovative leadership development program for NASA's employees. Antoine initially stared working with NASA as an intern, but subsequently landed a full-time job with NASA as a result of his stellar high performance during his internship.<br><p class='mt-2'>Over the years Antoine has been privileged to develop a powerful network of highly successful professionals. His network of high performers is comprised of astronauts, millionaires, U.S. Congressional officials, FBI agents, famous celebrities, past NBA & NFL players, doctors, authors, senior executives, and national business moguls. From these transformational encounters Antoine learned and intensely continues to study the attributes of high performance, and he began to put his knowledge into practice to achieve extraordinary success. As a result, Antoine created his high performance C.E.O. Maximum Achievement System that empowers young professionals to accelerate personal achievement, career advancement, and leadership capabilities.</p>",
+          "Alex Rodriguez":
+            "Born and raised in the Chicagoland area, Alex Rodriguez grew up inspired by action-packed stories of science fiction and the adventures of superheroes. She graduated with a Bachelor's degree in Psychology.<br><p class='mt-2'>Now a Wisconsin resident, Alex enjoys spending time with family and friends, walking her dog Titan, attending writing classes, and discovering new books/TV shows to fall in love with. </p>",
+          "Brandi Parsons":
+            "Brandi Parsons has been interested in social justice issues for more than two decades. Kidnapped Asylum is her debut book which she hopes will shed some light on the complicated issue of immigration in the United States. She currently lives in Cedar Rapids, Iowa with her family",
+          "Brant Vickers": "",
+          "Dr.Carolyn Scott":
+            "Dr. Carolyn Scott is a retired educator of 35 years. She spent her entire 35 years as a teacher and administrator in both traditional and non-traditional school settings, working with students identified as having learning difficulties. The first twenty years were spent with the Hillsborough County School System. Her last 15 years was spent at a charter school that was designed to help children who had learning difficulties in grades Kindergarten through 12th grade. The experience of working with these wonderful, creative and imaginative students is what instilled in her the passion to continue to find ways to help these students.<p class='mt-2'>When Pahlke is not brainstorming the next plot for the Life Force Preserve series, she is growing her father’s empire with her brother Garrett at Top Coverage, taking pictures of food or taking a crack at a new recipe.</p><p class='mt-2'>Courtney also writes for The SHOP national automotive magazine.</p>",
+          "Kathryn Cerver":
+            "Kathryn Cervera is the author of the young adult novel Who Is It?, now available at Amazon and at Barnes & Noble bookstores. She enjoys reading, cooking, and spending time with her husband. You'll know she's happy when she's singing and dancing.",
+          "Courtney Pahlke":
+            "Courtney Pahlke graduated from the University of Iowa with a degree in psychology and a secondary in creative writing. She worked at the Crisis Center in Iowa city leading to graduation day, where she went back home to Illinois with a plan. Courtney hoped to gain her masters degree in forensic psychology at a school in Chicago, while working for her dad, to pay for school. After the first year working for her dad’s company, she decided not to continue on with school and grow the family business instead.",
        
-        "Brandi Parsons": "Brandi Parsons has been interested in social justice issues for more than two decades. Kidnapped Asylum is her debut book which she hopes will shed some light on the complicated issue of immigration in the United States. She currently lives in Cedar Rapids, Iowa with her family",
-        "jegan": "Description for Jegan"
-    };
+          "Curse Queen":
+            "<p class=''>The Curse Queen was born in Ohio to a family with Witchcraft in their history. Her father was a long time practicing Wiccan, before moving on to darker practices. As of the writing of this book, he is a non-practicing agnostic. Her mother carries folk practices from a long line of female ancestors, both Irish and Native American.</p>"+
+            "<p class=''>Curse Queen has learned since childhood from both sides of her family, including her introduction to Vampires and Blood Magic by her paternal grandmother at a very young age. </p>"+
+            "<p class=''>She has created her own path, from the mix of the many things her family has taught her. She claims no titles and has no initiations into any coven or tradition, though she has aided in the forming of several covens that she subsequently left once they no longer served her best interests.</p>"+
+            "<p class=''>Curse Queen is currently considering accepting students in the near future.</p>"+
+            "<p class=''>You can send questions, comments, feedback, fan mail, hate mail, and more to: </p>",
+       
+       
+        };
 
-    const authorInfoDiv = document.getElementById("authorInfo");
-    if (title && image) {
-        // Create a div for the author image
-        const imageDiv = document.createElement("div");
-        imageDiv.classList.add("author_img");
-        const imageElement = document.createElement("img");
-        imageElement.src = image;
-        imageElement.alt = title;
-        imageDiv.appendChild(imageElement);
-        authorInfoDiv.appendChild(imageDiv);
+        const authorInfoDiv = document.getElementById("authorInfo");
+        if (title && image) {
+          // Author information exists, proceed with rendering
 
-        // Set the content of .author-book-heading div
-        const authorBookHeadingDiv = document.querySelector(".author-book-heading");
-        authorBookHeadingDiv.textContent = title + " Book";
+          // Create a div for the author image
+          const imageDiv = document.createElement("div");
+          imageDiv.classList.add("author_img");
+          const imageElement = document.createElement("img");
+          imageElement.src = image;
+          imageElement.alt = title;
+          imageDiv.appendChild(imageElement);
+          authorInfoDiv.appendChild(imageDiv);
 
-        // Create a div for the author details
-        const detailsDiv = document.createElement("div");
-        detailsDiv.classList.add("author_details", "px-3");
-        const titleParagraph = document.createElement("p");
-        titleParagraph.classList.add("title", "text-dark", "fw-bold", "fs-5");
-        titleParagraph.textContent = title;
-        detailsDiv.appendChild(titleParagraph);
+          // Set the content of .author-book-heading div
+          const authorBookHeadingDiv = document.querySelector(
+            ".author-book-heading"
+          );
+          authorBookHeadingDiv.textContent = title + " Book";
 
-        // Add description paragraph corresponding to the title
-const descriptionParagraph = document.createElement("p");
-descriptionParagraph.classList.add("author-description", "mt-3");
-descriptionParagraph.innerHTML = descriptions[title] || "Description not available";
-detailsDiv.appendChild(descriptionParagraph);
+          // Create a div for the author details
+          const detailsDiv = document.createElement("div");
+          detailsDiv.classList.add("author_details", "px-3");
+          const titleParagraph = document.createElement("p");
+          titleParagraph.classList.add("title", "text-dark", "fw-bold", "fs-5");
+          titleParagraph.textContent = title;
+          detailsDiv.appendChild(titleParagraph);
 
-        // Add social media links
-        const socialMediaDiv = document.createElement("div");
-        socialMediaDiv.classList.add("social_media", "mt-4");
-        if (title === "Alia Almoayed") {
+          // Add description paragraph corresponding to the title
+          const descriptionParagraph = document.createElement("p");
+          descriptionParagraph.classList.add(
+            "author-description",
+            "mt-3",
+            "paragraph"
+          );
+          descriptionParagraph.innerHTML =
+            descriptions[title] || "Description not available";
+          detailsDiv.appendChild(descriptionParagraph);
+
+          // Add social media links
+          const socialMediaDiv = document.createElement("div");
+          socialMediaDiv.classList.add("social_media", "mt-4");
+          if (title === "Alia Almoayed") {
             socialMediaDiv.innerHTML = `
-            <a href="https://aliaalmoayed.com/"><i class="fa-solid fa-globe"></i></a>
-            <a href=" https://www.facebook.com/alia.almoayed.5 "><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/aliaalmoayed/"><i class="fa-brands fa-instagram"></i></a>
-            <a href=" https://twitter.com/aliaalmoayed"><i class="fa-brands fa-x-twitter"></i></a>
-            `;
-        } else if (title === "Atoine D.Moss") {
+                    <a href="https://aliaalmoayed.com/"><i class="fa-solid fa-globe"></i></a>
+                    <a href=" https://www.facebook.com/alia.almoayed.5 "><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/aliaalmoayed/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href=" https://twitter.com/aliaalmoayed"><i class="fa-brands fa-x-twitter"></i></a>
+                    `;
+          } else if (title === "Antoine D.Moss") {
             socialMediaDiv.innerHTML = `
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-globe"></i></a>
-            `;
-        } else if (title === "Alex Rodriguez") {
+                    <a href=" https://antoinemoss.com/"><i class="fa-solid fa-globe"></i></a>
+                    <a href=" https://www.facebook.com/themanofinspiration "><i class="fa-brands fa-facebook"></i></a>
+                    <a href=" https://www.instagram.com/manofinspiration/ "><i class="fa-brands fa-instagram"></i></a>
+                    <a href=" https://twitter.com/2positivetweets"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=" https://www.linkedin.com/in/antoine-d-moss-ph-d-19a9576"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="  https://www.youtube.com/drantoinemoss "><i class="fa-brands fa-youtube"></i></a>
+                      `;
+          } else if (title === "Alex Rodriguez") {
             socialMediaDiv.innerHTML = `
-            <a href="https://www.facebook.com/alexrdtwriter"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/alexrdt_writes/ "><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.goodreads.com/author/show/22053460.Alex_Rodriguez"><i class="fa-brands fa-goodreads"></i></a>
-            `;
-        } else if (title === "Brandi Parsons") {
+                    <a href="https://www.facebook.com/alexrdtwriter"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/alexrdt_writes/ "><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.goodreads.com/author/show/22053460.Alex_Rodriguez"><i class="fa-brands fa-goodreads"></i></a>
+                    `;
+          } else if (title === "Brandi Parsons") {
             socialMediaDiv.innerHTML = `
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-globe"></i></a>
-            `;
+                    <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    `;
+          } else if (title === "Brant Vickers") {
+            socialMediaDiv.innerHTML = `
+                     <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    `;
+          } else if (title === "Dr.Carolyn Scott") {
+            socialMediaDiv.innerHTML = `
+                     <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    `;
+          } else if (title === "Kathryn Cerver") {
+            socialMediaDiv.innerHTML = `
+                    <a href="https://www.facebook.com/kathryncerveraauthor/ "><i class="fa-brands fa-facebook"></i></a>
+                    <a href=" https://www.instagram.com/kathryncervera6/ "><i class="fa-brands fa-instagram"></i></a>
+                    <a href=" https://twitter.com/CerveraKathryn"><i class="fa-brands fa-x-twitter"></i></a>  `;
+          } else if (title === "Courtney Pahlke") {
+            socialMediaDiv.innerHTML = `
+                     <a href="https://www.courtneyleighpahlke.com/courtneyleighpahlke"><i class="fa-solid fa-globe"></i></a>
+                    <a href=" https://www.facebook.com/courtneyleighpahlke "><i class="fa-brands fa-facebook"></i></a>
+                    <a href=" https://www.instagram.com/courtneyleighpahlke/ "><i class="fa-brands fa-instagram"></i></a>
+                    <a href=" https://twitter.com/CourtneyLPahlke"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.goodreads.com/author/show/19146881.Courtney_Leigh_Pahlke"><i class="fa-brands fa-goodreads"></i></a>
+                    `;
+          } else if (title === "Curse Queen") {
+            socialMediaDiv.innerHTML = `
+            <a href="Author.Curse.Queen@Gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/Author.Curse.Queen "><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/curse.queen/ "><i class="fa-brands fa-instagram"></i></a>
+                   `
+          }
+
+
+          detailsDiv.appendChild(socialMediaDiv);
+
+          authorInfoDiv.appendChild(detailsDiv);
+
+          // Add image to .book-img div based on author
+          const bookImgDiv1 = document.querySelector(".book-img-1");
+          const bookImgDiv2 = document.querySelector(".book-img-2");
+          if (title === "Alia Almoayed") {
+            bookImgDiv1.innerHTML = `<a href="books_info.html?bookImage=/images/books/I want a healthy pregnancy.png">
+            <img id="book-img" src="/images/books/I want a healthy pregnancy.png" alt="pregnancy book">
+        </a><p class="book-name">Healthy Pregnancy Book</p>`;
+          } else if (title === "Antoine D.Moss") {
+            bookImgDiv1.innerHTML = `        <a href="/books_info.html?bookImage=/images/books/Learn to intern CEO style.png">
+            <img id="book-img" src="/images/books/Learn to intern CEO style.png" alt="CEO book">
+        </a>
+        <div class="book-name">Learn to intern CEO style</div>`;
+          } else if (title === "Alex Rodriguez") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Lapse.png">
+            <img id="book-img" src="/images/books/Lapse.png" alt="Lapse">
+        </a>
+        <div class="book-name">Lapse</div>`;
+          } else if (title === "Brandi Parsons") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Kidnapped Asylum.png">
+            <img id="book-img" src="/images/books/Kidnapped Asylum.png" alt="Lapse">
+        </a>
+        <div class="book-name">Kidnapped Asylum</div>`;
+          } else if (title === "Brant Vickers") {
+            bookImgDiv1.innerHTML = `
+                    <a href="/books_info.html?bookImage=/images/books/The sift in the backlot.png">
+            <img id="book-img" src="/images/books/The sift in the backlot.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+          } else if (title === "Dr.Carolyn Scott") {
+            bookImgDiv1.innerHTML = `
+                    <a href="/books_info.html?bookImage=/images/books/Enhanced Learning Abilities.png">
+            <img id="book-img" src="/images/books/Enhanced Learning Abilities.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+          } else if (title === "Kathryn Cerver") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Who Is It.png">
+            <img id="book-img" src="/images/books/Who Is It.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+          } else if (title === "Courtney Pahlke") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Life force preserve series 1.png">
+    <img id="book-img" src="/images/books/Life force preserve series 1.png" alt="Life force preserve series 1">
+</a>
+<div class="book-name">Life force preserve series 1</div>`;
+            // Additionally, show bookImgDiv2
+            bookImgDiv2.style.display = "block";
+            bookImgDiv2.innerHTML = `
+                    
+                    <a href="/books_info.html?bookImage=/images/books/Life force preserve series 2.png">
+    <img id="book-img" src="/images/books/Life force preserve series 2.png" alt="Life force preserve series 2">
+</a>
+<div class="book-name">Life force preserve series 2</div>`;
+          } else if (title === "Curse Queen") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Little Black Book of Nasty Spells.png">
+            <img id="book-img" src="/images/books/The Little Black Book of Nasty Spells.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+          }
         }
-        
-        detailsDiv.appendChild(socialMediaDiv);
-
-        authorInfoDiv.appendChild(detailsDiv);
-        
-        // Add image to .book-img div based on author
-const bookImgDiv = document.querySelector(".book-img");
+      });
+    </script>
+  </body>
+</html>
+<!-- // Add image to .book-img div based on author -->
+<!-- const bookImgDiv1 = document.querySelector(".book-img-1");
+const bookImgDiv2 = document.querySelector(".book-img-2");
 if (title === "Alia Almoayed") {
-    bookImgDiv.innerHTML = `
-        <a href="books_info.html?bookImage=/images//healthy-pregnancy book.png">
-            <img id="book-img" src="/images//healthy-pregnancy book.png" alt="pregnancy book">
+    bookImgDiv1.innerHTML = `
+        <a href="books_info.html?bookImage=/images/books/I want a healthy pregnancy.png">
+            <img id="book-img" src="/images/books/I want a healthy pregnancy.png" alt="pregnancy book">
         </a>
         <p class="book-name">Healthy Pregnancy Book</p>`;
-} else if (title === "Atoine D.Moss") {
-    bookImgDiv.innerHTML = `
-        <a href="/books_info.html?bookImage=/images/CEO book.png">
-            <img id="book-img" src="/images/CEO book.png" alt="CEO book">
+} else if (title === "Antoine D.Moss") {
+    bookImgDiv1.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/books/Learn to intern CEO style.png">
+            <img id="book-img" src="/images/books/Learn to intern CEO style.png" alt="CEO book">
         </a>
-        <div class="book-name">CEO Book</div>`;
-} else if (title === "venu") {
-    bookImgDiv.innerHTML = `
-        <a href="books_info.html?bookImage=/images/author-img.png">
-            <img id="book-img" src="/images/author-img.png" alt="author book">
+        <div class="book-name">Learn to intern CEO style</div>`;
+}else if (title === "Alex Rodriguez") {
+    bookImgDiv1.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/books/Lapse.png">
+            <img id="book-img" src="/images/books/Lapse.png" alt="Lapse">
         </a>
-        <div>Author's Book</div>`;
+        <div class="book-name">Lapse</div>`;
 }
-    } else {
-        const p = document.createElement("p");
-        p.textContent = "Author information not found.";
-        authorInfoDiv.appendChild(p);
-    }
-});
-</script>
-</body>
-</html>
+else if (title === "Brandi Parsons") {
+    bookImgDiv1.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/books/Kidnapped Asylum.png">
+            <img id="book-img" src="/images/books/Kidnapped Asylum.png" alt="Lapse">
+        </a>
+        <div class="book-name">Kidnapped Asylum</div>`;
+}
+else if (title === "Brant Vickers") {
+    bookImgDiv1.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/books/The sift in the backlot.png">
+            <img id="book-img" src="/images/books/The sift in the backlot.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+}
+else if (title === "Dr.Carolyn Scott") {
+    bookImgDiv1.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/books/Enhanced Learning Abilities.png">
+            <img id="book-img" src="/images/books/Enhanced Learning Abilities.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+}
+else if (title === "Kathryn Cerver") {
+    bookImgDiv1.innerHTML = `
+        <a href="/books_info.html?bookImage=/images/books/Who Is It.png">
+            <img id="book-img" src="/images/books/Who Is It.png" alt="Lapse">
+        </a>
+        <div class="book-name">The sift in the backlot</div>`;
+}
+else if (title === "Courtney Pahlke") {
+bookImgDiv1.innerHTML = `
+<a href="/books_info.html?bookImage=/images/books/Life force preserve series 1.png">
+    <img id="book-img" src="/images/books/Life force preserve series 1.png" alt="Life force preserve series 1">
+</a>
+<div class="book-name">Life force preserve series 1</div>`;
+bookImgDiv2.innerHTML = `
+<a href="/books_info.html?bookImage=/images/books/Life force preserve series 2.png">
+    <img id="book-img" src="/images/books/Life force preserve series 2.png" alt="Life force preserve series 2">
+</a>
+<div class="book-name">Life force preserve series 2</div>`;
+}
+} else {
+const p = document.createElement("p");
+p.textContent = "Author information not found.";
+authorInfoDiv.appendChild(p);
+} -->
