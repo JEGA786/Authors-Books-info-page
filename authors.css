@@ -273,11 +273,10 @@ font-weight: 600;
 }
 
 .see-all,.buttons a{
-  text-align: center;
-  color:var(--text-color-black) !important;
+text-align: center;
+color:var(--text-color-black) !important;
 font-weight: 550;
 min-width:100px;
-/* min-height:100px; */
 padding: 7px;
 border-radius: 5px;
 background: var(--primary-color);
@@ -351,6 +350,19 @@ transition: all 0.5s ease-in-out;
     border-radius: 300px !important;
     
 }
+.see-all,.buttons a{
+  text-align: center;
+  font-size: 15px !important;
+  color:var(--text-color-black) !important;
+  font-weight: 550;
+  min-width:100px;
+  padding: 5px;
+  border-radius: 3px;
+  background: var(--primary-color);
+  border: none !important;
+  transition: all 0.5s ease-in-out;
+  }
+  
 }
 
 @media screen and (max-width:320px) {
