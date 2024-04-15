@@ -31,7 +31,7 @@
     <h4>Books Information</h4>
     <div id="author-book-img" class="author-book-img mt-3"></div>
     <div class="buttons d-flex justify-content-center flex-wrap gap-4 mt-4"></div>
-    <h4 class="heading book-name fs-5 text-uppercase mt-5"></h4>
+    <h4 class="heading book-name fs-5 fw-bold mt-5"></h4>
     <div class="books-discription paragraph text-center col-lg-10 col-md-11 col-12 mt-2 lh-lg lh-base text-justify">
         <p></p>
     </div>
@@ -165,21 +165,212 @@ document.addEventListener("DOMContentLoaded", function() {
             description = "Anna confronts the mysterious people blending into events following several near-death incidents, only to learn they’re a part of a worldwide organization that’s been covertly safeguarding her endangered bloodline against another invading presence" +
             "<p class='mt-2'>Editorial Reviews</p>"+
             "<p class='mt-2'>Author Courtney Leigh Pahlke's Life Force Preserve is an eerily suspenseful book that will keep readers guessing with every turn of the page. Recommended for home and school libraries, this book has earned the Literary Classics Seal of Approval.<span class='fw-bold fst-italic'> —  Literary Classics International Book Awards</span></p>" +
-"<p class='mt-2 '>Life Force Preserve is a gripping story that is best experienced by going in with as little foreknowledge as possible...The grittiness and tension draw readers in and keep them engaged right to the end. <span class='fw-bold fst-italic'>— ManyBooks</span></p>"+"<p class='mt-2 fs-5 fw-medium'>Awards & Accolades </p>"+
+"<p class='mt-2 '>Life Force Preserve is a gripping story that is best experienced by going in with as little foreknowledge as possible...The grittiness and tension draw readers in and keep them engaged right to the end. <span class='fw-bold fst-italic'>— ManyBooks</span></p>"+"<p class='mt-2 fs-5 fw-medium'>Awards & Accolades <i class='fa-solid fa-award  fs-5'></i></p>"+
 "<p class='mt-2 fw-medium'>2019 CLC International Mystery Book of the Year </p>"+"<p class='mt-1 fw-medium'>2019 Chanticleer Global Thriller Award Finalist</p>" ;
         }
-        else if (imageSrc.includes('The Little Black Book of Nasty Spells')) {
+        else if (imageSrc.includes('The Magnificent Life of Gravvy Brown')) {
             buttonInfo = [
-                { label: "Amazon", link: " https://www.amazon.com/Life-Force-Preserve-Book-Resurgent/dp/1545744130 " },
-                { label: "Apple Books", link: " https://books.apple.com/us/book/the-little-black-book-of-nasty-spells/id1455205941 " },
-                { label: "Google Play", link: "https://play.google.com/store/books/details/Curse_Queen_The_Little_Black_Book_of_Nasty_Spells?id=FpeLDwAAQBAJ  " },
+              
+                { label: "Apple Books", link: " https://books.apple.com/us/book/the-magnificent-life-of-gravvy-brown/id522654924 " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/DeVaughn_M_Lilly_The_Magnificent_Life_of_Gravvy_Br?id=LorDAgAAQBAJ  " },
                 { label: "eBooks2go", link: "#" },
-                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/the-little-black-book-of-nasty-spells " }
+              
              
             ];
-            description = "In a world practically drowning in <span class='fw-medium'>Love and Light</span> witches, it's hard to find a book of useful spells, that can get the job done. If you've ever been annoyed on social media by people and groups who want to push their own personal morals and beliefs as laws on the whole of Paganism and Witchcraft, this is the book for you. This is a no-holds-barred, karma-free, Law of the Jungle look, into casting spells for revenge, protection, love, and more!"   }
+            description = "The Magnificent Life of Gravvy Brown is the life story of a young woman from New Orleans Louisiana and her meteoric rise from the harsh streets of the bayou to the bright lights of Hollywood. On the eve of his execution for the brutal murder of his mother, Gravvy sits down with a journalist and eloquently tells the story of what really happened in their tortured yet ‘Magnificent’ life. This is a tale that the Louisiana and American Justice systems wanted too forget about. "   }
+            else if (imageSrc.includes("Gracie's Stories")) {
+            buttonInfo = [
+                { label: "Amazon", link: "" },
+                { label: "Apple Books", link: " " },
+                { label: "Google Play", link: " " },
+                { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: " " }
+             
+            ];
+            description = "Gracie is a precocious six-year-old little girl who loves her mommy and daddy, her friends, and has a fun life. Her Mommy and Daddy have a very big secret, but they have not told her yet! How will Gracie handling finding out that her parents adopted her? Follow Gracie thru six more stories to see how she handles moving, new friends-new school, and a new brother. See life thru the eyes of a precocious six-year-old girl named Gracie. She how she deals with adoption; moving, new friends and new school; and the biggest change ever, getting a new brother!"   }
         
-        // Set the HTML content of the paragraph tag inside the books-discription div
+            else if (imageSrc.includes("Who's There Bear")) {
+            buttonInfo = [
+                { label: "Amazon", link: "" },
+                { label: "Apple Books", link: " " },
+                { label: "Google Play", link: " " },
+                { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: " " }
+             
+            ];
+            description = "Knock, Knock, Who's There, Bear? A Story About Embracing Bipolar Disorder helps children understand various bipolar disorder symptoms and what to do about them. The story setting is a playground with Bear as the main character. It describes Bear's brain, symptoms, friendship and just being special for who you are."   }
+        
+            else if (imageSrc.includes("Polka Dots and Politics")) {
+            buttonInfo = [
+                { label: "Amazon", link: "" },
+                { label: "Apple Books", link: " " },
+                { label: "Google Play", link: " " },
+                { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: " " }
+             
+            ];
+            description = "'The cast of characters seemed infinite in variety. Figures of monumental stature, ordinary men and women, heroes, villains, lovers and warriors, idealist, cultural icons, leaders of industry, family and friends,' all appear in this looking glass of small-town politics and it's enthusiastic glam. The tale is one of rapture and regret, flashes of guilty pleasure and tearful refrain, proud achievement and embarrassing blunders. Then again, when all my strutting and fretting is done, my book amounts to a fun, humorous political satire. I will settle for your enjoyment of my work as one of my desires."+
+            "<p class='mt-2 fs-5 fw-medium'>Awards & Accolades <i class='fa-solid fa-award  fs-5'></i></p>"+
+            "<p class='mt-2'>2019 American Fiction Awards Finalist for Political Thriller of the Years</p>"+"<p class='mt-2'>2019 American Fiction Awards Finalist for Comedy/Humor Book of the Year</p>"   }
+        
+        
+            else if (imageSrc.includes("Point Line Plane Eternity")) {
+            buttonInfo = [
+                
+                { label: "Apple Books", link: "https://books.apple.com/us/book/point-line-plane-eternity-the-journey-from-alone-to/id1500127686  " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Jay_Payleitner_Point_Line_Plane_Eternity_The_journ?id=OhXSDwAAQBAJ " },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/point-line-plane-eternity " },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/point-line-plane-eternity-the-journey-from-alone-to-finally-home  " }
+             
+            ];
+            description = "'Once there was as boy who lived on a point...'' Thus begins a modern allegory that challenges our typical self-centered existence. Indeed, some people live on a point. It’s all about them. Some live on a line. They may actually care about the people they meet, but they never really leave their comfort zone. Most people live on a plane."+
+           
+            "<p class='mt-2'>They do their best in a flat, two-dimensional world, but deny what they know in their heart: “There’s more to this life than this life.” Point/Line/Plane/Eternity empowers readers to live with joy and purpose — still part of the finite world — while anticipating your forever home in heaven. In one sitting, you’ll finally understand what it means to be living on the threshold of eternity.</p>"  }
+        
+            else if (imageSrc.includes("Road Map To Tomorrow")) {
+            buttonInfo = [
+                
+            { label: "Amazon", link: "" },
+                { label: "Apple Books", link: "" },
+                { label: "Google Play", link: "" },
+                { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: "" }
+          
+            ];
+            description = "<span class='fw-bold'>Change how a person thinks, and you will change how they feel. Change how they feel, and you will change how they perform. Change how they perform and you will change the results. Change the results and you will change their lives.</span> This quote from R.W. Ross perfectly exemplifies my vision and dreams for Road Map to Tomorrow."+
+           
+            "<p class='mt-2'><span class='fw-bold fst-italic'>Road Map to Tomorrow</span> was inspired by the responsibility of my generation to transfer the knowledge of the past while laying the foundation for the technology of the future. The generational shift together with our exploding technology and gentrification of our world and everything in it. You will either be prepared or you won't. You will either adapt or you will professionally die. This book creatively provides a technology road map that takes you into the future with contributions from over 100 scientific experts providing you with insights into the future. Their studies and opinions touch on everything from computers to robots, medical science to nanotechnology, transportation to education, employment to politics, and entrepreneurial opportunities to love.</p>"  +
+            "<p class='mt-2'>Our new world is exciting! It presents an abundance of opportunities the likes of which we have never seen. Change can cause both devastation and opportunity and those that prepare, learn to react, and position themselves professionally will be light years ahead on their journey to success. This book is your personal <span class='fw-bold fst-italic'>Road Map to Tomorrow</span> </p>"  }
+        
+            else if (imageSrc.includes("One-Matter Nature Science")) {
+            buttonInfo = [
+                
+            { label: "Amazon", link: "https://www.amazon.com/gp/product/1545755604" },
+                { label: "Apple Books", link: "https://books.apple.com/us/book/one-matter-nature-science-tsaus-scientific-revolution/id6443373586" },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Josef_Tsau_One_Matter_Nature_Science_Tsau_s_Scient?id=dBGIEAAAQBAJ" },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/one-matter-nature-science" },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/one-matter-nature-science-josef-tsau/1142082411" },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/one-matter-nature-science-tsau-s-scientific-revolution" }
+          
+            ];
+            description = "The (nature) science discovered by Copernicus and Galileo during the 16th and 17th centuries has a definition to obey of using a specific scientific method, experimental method, to make scientific discoveries leading to the development of today's mechanical physics. Yet, the centuries-long scientific misconceptions have misled the scientific community to develop the theories of modern physics disobeying the definition of science, which has to be wrong scientifically but has become today's mainstream-of-thought science. A scientific revolution is needed to introduce Tsau's breakthrough scientific discovery and to remove modern physics from science."}
+           
+            else if (imageSrc.includes("The Little Blue Dog")) {
+            buttonInfo = [
+                
+            { label: "Amazon", link: "https://www.amazon.com/gp/product/1545755604" },
+                { label: "Apple Books", link: "https://books.apple.com/us/book/one-matter-nature-science-tsaus-scientific-revolution/id6443373586" },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Josef_Tsau_One_Matter_Nature_Science_Tsau_s_Scient?id=dBGIEAAAQBAJ" },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/one-matter-nature-science" },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/one-matter-nature-science-josef-tsau/1142082411" },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/one-matter-nature-science-tsau-s-scientific-revolution" }
+          
+            ];
+            description ="The Little Blue Dog is a children's book inspired by the real life story of a small Chihuahua named Louie who ends up in a shelter in California. This lovable character represents the countess dogs who find themselves homeless. Louie's journey exemplifies the story of survival, hope and second chances. With a mission to give back, 100% of the profits from the sale of The Little Blue Dog will be donated to animal rescue organizations. For more information about Louie, visit www.thelittlebluedog.com "+
+            "<p class='mt-2 fs-5 fw-medium'>Praise and Editorial Reviews</p>"+
+            "<p class='mt-2'>'Karen Roberts has masterfully captured the plight of one spunky little dog's sojourn to a better place, while taking the reader through a shelter pet's emotional turmoil. This tail-wagging story, which advocates adoption and responsible pet ownership, is spun in a manner to warm the hearts of many - including mine. I highly recommend this book as a must-read for children and their parents.' - Katherine Heigl, Co-founder, Jason Debus Heigl Foundation</p>"+
+            "<p class='mt-2 fs-5 fw-medium'>Awards & Accolades <i class='fa-solid fa-award  fs-5'></i></p>"+
+            "<p class='mt-2'>2013 National Indie Excellence Awards Winner</p>"}
+            else if (imageSrc.includes("The Gentle Beagle")) {
+            buttonInfo = [
+                
+           
+                { label: "Apple Books", link: " https://books.apple.com/us/book/the-gentle-beagle/id924539370" },
+                { label: "eBooks2go", link: " https://www.ebooks2go.com/the-gentle-beagle" },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Karen_J_Roberts_The_Gentle_Beagle?id=cpGnBAAAQBAJ " },
+          
+            ];
+            description = "Being different can be lonely. But compromising her values just to fit in was not a path the gentle Beagle was willing to take.Fall in love with the gentle Beagle as her bravery and kind heart help her find her true calling. Her courageous journey begins as a hunting dog living in a barn deep in the woods of Virginia. Through scary events and daunting challenges, her uncertain fate leads directly to her life's purpose. Touching the lives of so many along the way, she will reach off the pages and touch your heart as well. The memorable characters in this heartwarming tale teach us lessons about compassion for animals, and strength of character. Even though her life takes some unexpected turns, the gentle Beagle stays true to herself and becomes the best kind of hero, a hero of the heart."}
+        
+            else if (imageSrc.includes("Terriers Tale Cover")) {
+            buttonInfo = [
+                
+           
+                { label: "Apple Books", link: " https://books.apple.com/us/book/the-gentle-beagle/id924539370" },
+                { label: "eBooks2go", link: " https://www.ebooks2go.com/the-gentle-beagle" },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Karen_J_Roberts_The_Gentle_Beagle?id=cpGnBAAAQBAJ " },
+          
+            ];
+            description = "The animal shelter is no place for an adorable, active little terrier!Bored and lonely, he spends his days hoping to be adopted, longing for a family of his own. By night, he escapes in his mind to a wonderful dream world. The little terrier dreams of living a cowboy’s life, riding horses and herding cattle on the open range. Will his dreams come true?A Terrier’s Tale is a joyful and entertaining story of a little dog with a giant wish. He wants what all dogs deserve, to be part of a family where his life can have purpose and meaning."+
+            "<p class=''>Based loosely on the real life dog rescued by author Karen J. Roberts, A Terrier’s Tale represents the plight of all shelter dogs, and the amazing power adopting a pet can have on the human spirit. A Terrier’s Tale is told with humor and affection weaving together delightful characters; both two and four legged, while teaching subtle lessons of family, kindness and the simple beauty of every day life. The story is artfully illustrated with charming and engaging images created by Lilith Jones.</p>"}
+        
+            else if (imageSrc.includes("A Labyrinth Of LifeTimes")) {
+            buttonInfo = [
+                
+           
+            { label: "Amazon", link: " https://www.amazon.com/Labyrinth-Lifetimes-Kathy-Bornino/dp/154575277X " },
+                { label: "Apple Books", link: "https://books.apple.com/us/book/a-labyrinth-of-lifetimes/id1525979807 " },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/a-labyrinth-of-lifetimes-kathy-bornino/1137418147?ean=9781545752777 " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Kathy_Bornino_A_Labyrinth_of_Lifetimes?id=3Rz0DwAAQBAJ  " },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/a-labyrinth-of-lifetimes" },
+                { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/a-labyrinth-of-lifetimes " }
+          
+            ];
+            description = "The animal shelter is no place for an adorable, active little terrier!Bored and lonely, he spends his days hoping to be adopted, longing for a family of his own. By night, he escapes in his mind to a wonderful dream world. The little terrier dreams of living a cowboy’s life, riding horses and herding cattle on the open range. Will his dreams come true?A Terrier’s Tale is a joyful and entertaining story of a little dog with a giant wish. He wants what all dogs deserve, to be part of a family where his life can have purpose and meaning."+
+            "<p class=''>Based loosely on the real life dog rescued by author Karen J. Roberts, A Terrier’s Tale represents the plight of all shelter dogs, and the amazing power adopting a pet can have on the human spirit. A Terrier’s Tale is told with humor and affection weaving together delightful characters; both two and four legged, while teaching subtle lessons of family, kindness and the simple beauty of every day life. The story is artfully illustrated with charming and engaging images created by Lilith Jones.</p>"}
+        
+            else if (imageSrc.includes("Leading With Vision and Heart")) {
+            buttonInfo = [
+                
+           
+            { label: "Amazon", link: " https://www.amazon.com/Leading-Vision-Heart-Leonard-Roberts-ebook/dp/B0CGQ3ZC53  " },
+                { label: "Apple Books", link: " https://books.apple.com/us/book/leading-with-vision-and-heart-a-memoir/id6463473100  " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Leonard_H_Roberts_Leading_with_Vision_and_Heart_A?id=yvzSEAAAQBAJ  " },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/leading-with-vision-and-heart " },
+                { label: "Kobo", link: "  https://www.kobo.com/us/en/ebook/leading-with-vision-and-heart-a-memoir " }
+          
+            ];
+            description = "The animal shelter is no place for an adorable, active little terrier!Bored and lonely, he spends his days hoping to be adopted, longing for a family of his own. By night, he escapes in his mind to a wonderful dream world. The little terrier dreams of living a cowboy’s life, riding horses and herding cattle on the open range. Will his dreams come true?A Terrier’s Tale is a joyful and entertaining story of a little dog with a giant wish. He wants what all dogs deserve, to be part of a family where his life can have purpose and meaning."+
+            "<p class='mt-2 fs-5 fw-medium'>Editorial Reviews </p>"+
+            "<p class=''>Leading with Vision and Heart' transcends the realm of mere professional chronicles; it is an eloquent and heartfelt narrative that underscores the timeless importance of family and the invaluable bonds of friendship in shaping one's life. Your personal journey is nothing short of awe-inspiring. <span class='fw-bold fst-italic'>— John Wilder</span>, Executive Chairman of Bluescape Partners and Former CEO of TXU Energy</p>"+
+            "<p class=''>Curly Fries are a national treasure, and we have Len Roberts to thank for that gift to America, along with the wisdom and inspiration he shares in his new book, Leading with Vision and Heart. <span class='fw-bold fst-italic'>— Fort Worth Business Press </span></p>"}
+        
+            else if (imageSrc.includes("H Zoh Mae (Our Life)")) {
+            buttonInfo = [
+                
+           
+            { label: "Amazon", link: " https://www.amazon.com/%CE%96%CE%A9%CE%97-%CE%9C%CE%91%CE%A3-Our-Life-Kefalonia/dp/1545756481  " },
+                { label: "Apple Books", link: "https://books.apple.com/us/book/h-%CE%B6%CF%89%CE%B7-%CE%BC%CE%B1%CF%82-our-life/id6445275770?ls=1 " },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/h-918-937-919-924-913-931-louis-garbis/1144660061?ean=9781545756478   " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Louis_Garbis_H_%CE%96%CE%A9%CE%97_%CE%9C%CE%91%CE%A3_Our_Life?id=st-kEAAAQBAJ  " },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/our-life-louis-garbis  " },
+                { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/h-our-life  " }
+          
+            ];
+            description = "«Η ΖΩΗ ΜΑΣ» (our life) is a homage and a spiritual journey to our origins, our place of birth. I wanted to learn about our family's life in Kefalonia and its trials and tribulations in some very challenging times. Its occupation by the Axis Powers in WWII, the subsequent Greek Civil War, and the devasting earthquake that caused great damage to much of Kefalonia, aggravating the severe poverty that most Kefalonians were already experiencing. I also thought it would be a lost opportunity for us not to share our family's story with our descendants and the subsequent emigration to America."+
+            "<p class='mt-2'>In addition to the family history, 'Our Life' compares democracy versus communism, the American and Greek Civil Wars and their impact on each country, the fundamental issue of slavery and why it was so vile, criminal, and wrong, and the plight and betrayal of the American Indians as a result of the migration of the white men to the Americas. My book also outlines the seminal impact of the initial Greek victories over Italy in WWII and their significant ramifications to the world, and explains how a young Evzone's sacrifice reinforces and represents the strong and unconditional love of freedom of the Greek people.</p>"}
+        
+            else if (imageSrc.includes("Redemption A Journey from Tragedy to Triumph")) {
+            buttonInfo = [
+                
+           
+            { label: "Amazon", link: "https://www.amazon.com/Redemption-Journey-Tragedy-Lynda-Vialet/dp/1545751102 " },
+                { label: "Apple Books", link: "https://books.apple.com/us/book/redemption-a-journey-from-tragedy-to-triumph/id1501800537 " },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/redemption-lynda-m-vialet/1136606298?ean=9781545751107  " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Lynda_M_Vialet_Redemption_A_Journey_from_Tragedy_t?id=1IvUDwAAQBAJ " },
+                { label: "eBooks2go", link: " https://www.ebooks2go.com/redemption-a-journey-from-tragedy-to-triumph " },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/redemption-a-journey-from-tragedy-to-triumph  " }
+          
+            ];
+            description = "Redemption: A Journey from Tragedy to Triumph, is an intense drama based on a true story about a young woman’s journey to overcome the shame and guilt of a ruthless sexual assault. With quick thinking, she was able to fool her assailant and survive the attack only to endure a long three-year battle to bring her assailant to justice. She embraced the love and support from her family but was very emotionally scarred as a result of her attack. This story is how she gained courage and strength through this tragedy and how she found her purpose through the pain. "}
+        
+            else if (imageSrc.includes("Craft Your Calling")) {
+            buttonInfo = [
+                
+           
+            { label: "Amazon", link: " https://www.amazon.com/Craft-Your-Calling-30-day-Training/dp/154575439X  " },
+                { label: "Apple Books", link: "https://books.apple.com/us/book/redemption-a-journey-from-tragedy-to-triumph/id1501800537 " },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/redemption-lynda-m-vialet/1136606298?ean=9781545751107  " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Lynda_M_Vialet_Redemption_A_Journey_from_Tragedy_t?id=1IvUDwAAQBAJ " },
+                { label: "eBooks2go", link: " https://www.ebooks2go.com/redemption-a-journey-from-tragedy-to-triumph " },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/redemption-a-journey-from-tragedy-to-triumph  " }
+          
+            ];
+            description = "The problem in the personal development and self-improvement market for the target reader is that every book merely tells you what you need to do to be a better version of yourself. Every author presents their list of things needed to grow and find meaning in life. Their end goal is to educate the target reader without regard for actual learning and growth."+
+            "<p class=''>In Craft Your Calling, Marc Casciani gives you a 30-day warm-up to prepare for a journey to craft your calling. A calling is a worthy occupation where one derives meaning. It requires hunger and passion. It leverages the one true gift we have. We’re all here for a reason. We’re all here to do something great. But it’s not through our job. It’s through our calling. The Bible says in Ephesians 4:1 that we are to “live up to the life which God called you.”</p>"+
+            "<p class=''>Marc Casciani as a professional coach has completed the journey upon which you the reader want to embark. He has crafted his calling, and his story uniquely qualifies him to be your coach in this endeavor. This book is not for everyone, but if you commit, then you won’t have to walk your journey alone.</p>"}
+        
+            
         descriptionContainer.innerHTML = `<p>${description}</p>`;
 
         // Generate HTML for buttons
