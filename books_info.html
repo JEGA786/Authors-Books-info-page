@@ -10,6 +10,8 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 <style>
     .author-book-img {
@@ -28,12 +30,16 @@
 
 <body>
 <div class="container d-flex flex-column align-items-center py-4 pb-5">
-    <h4>Books Information</h4>
-    <div id="author-book-img" class="author-book-img mt-3"></div>
-    <div class="buttons d-flex justify-content-center flex-wrap gap-4 mt-4"></div>
-    <h4 class="heading book-name fs-5 fw-bold mt-5"></h4>
-    <div class="books-discription paragraph text-center col-lg-10 col-md-11 col-12 mt-2 lh-lg lh-base text-justify">
-        <p></p>
+    <h4 data-aos="fade-right"
+    data-aos-duration="2000"> Book Details</h4>
+    <h4 data-aos="fade-up"
+    data-aos-duration="2000" class="heading book-name fs-5 fw-bold mt-3 "></h4>
+    <div data-aos="zoom-in"
+    data-aos-duration="2000" id="author-book-img" class="author-book-img mt-3"></div>
+    <div  class="buttons d-flex justify-content-center flex-wrap gap-4 mt-4"></div>
+  
+    <div  class="books-discription paragraph text-center col-lg-10 col-md-11 col-12 mt-4 lh-lg lh-base text-justify">
+        <p ></p>
     </div>
 </div>
 
@@ -88,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { label: "eBooks2go", link: "https://www.ebooks2go.com/learn-to-intern-ceo-style-71-leadership-principles-that-got-me-and-now-you-money-a-free-graduate-degree-and-respect" },
                 { label: "Google Play", link: "https://play.google.com/store/books/details/Antoine_D_Moss_Learn_to_Intern_CEO_Style_71_Leader?id=LH5lOVmyyeIC" },
             ];
-            description = "Learn to Intern CEO Style shows you how to develop and shape your CEO skills and attitude through internships, written by a student currently completing his eighth world-class internship.Antoine Moss developed the <span class='fw-bold'> Creator of Excellent Opportunities </span> (CEO) internship style framework from his fascinating, once-in-a-life time experiences. He has interned on Capitol Hill, with the FBI, and NASA. Moss co-interned with celebrities and played an integral role in solving a federal law enforcement case. This book will help students and young professionals stand out in today’s overcrowded job market so they can land the job of their dreams! <br> <p class='mt-2'> Learn to Intern CEO Style is an essential guide for enterprising students trying to break into a career at all levels of government and business organizations. This book is a genuine and honest look at what to do, and more importantly, what not to do in the world of internships. What Moss has created is a handy book with a mix of authentic stories about being in the trenches coupled with practical <span class='fw-bold'> how-to advice. An invaluable addition to your personal library! <br><p class='mt-2'> Mayor Luke Ravenstahl, City of Pittsburgh Mayor Ravenstahl, 29-years-old, youngest mayor of any major U.S. city</p>";
+            description = "Learn to Intern CEO Style shows you how to develop and shape your CEO skills and attitude through internships, written by a student currently completing his eighth world-class internship. Antoine Moss developed the <span class='fw-bold'> Creator of Excellent Opportunities </span> (CEO) internship style framework from his fascinating, once-in-a-life time experiences. He has interned on Capitol Hill, with the FBI, and NASA. Moss co-interned with celebrities and played an integral role in solving a federal law enforcement case. This book will help students and young professionals stand out in today’s overcrowded job market so they can land the job of their dreams!  <p class='mt-2 fs-5 fw-medium'>Praise and Editorial Reviews</p> <p class='mt-2'> Learn to Intern CEO Style is an essential guide for enterprising students trying to break into a career at all levels of government and business organizations. This book is a genuine and honest look at what to do, and more importantly, what not to do in the world of internships. What Moss has created is a handy book with a mix of authentic stories about being in the trenches coupled with practical <span class='fw-bold'> how-to advice. An invaluable addition to your personal library! <p class='mt-2'> Mayor Luke Ravenstahl, City of Pittsburgh Mayor Ravenstahl, 29-years-old, youngest mayor of any major U.S. city</p>";
         }
          else if (imageSrc.includes('Lapse')) {
             buttonInfo = [
@@ -100,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/lapse-2 " },
                 { label: "Google Play", link: "https://play.google.com/store/books/details/Alex_Rodriguez_Lapse?id=tNBBEAAAQBAJ" }
             ];
-            description = "Nora knows the rules.<p class='mt-2'>Find the time marker, never reveal the secrets of the universe, don't get involved in the time marker's lives.</p> <p class='mt-2'>However, in nearly every single life cycle, they're paired together, when it comes to Mason, she breaks all the rules again and again </p> <p class='mt-2'> She found him when he was twelve. In high school, Nora taught him his place in the universe. And their lives were thoroughly intertwined-now more than ever.</p> <p class='mt-2'>Despite her mistakes, Nora's job was easy enough, until everything took a sharp turn. Mason is angry with her, with the universe telling her who she ought to be. Nora knows her role, and what that responsibility means. She isn't about to start questioning why things are the way they are, though in her heart her efforts are beginning to unfurl a fog over her judgment. To add to their cosmic dysfunction, Mason and Nora are only one time warp away from being discovered by time travelers, who would like nothing more than to see Mason restart a life cycle, or thrown out of time completely.</p> <p class='mt-2'> <span class='fw-bold'>Editorial Reviews:</span></p> <p class='mt-2'>Rodriguez has an excellent storytelling style with good pacing and panache for some rough and ready action scenes. There s a lot for sci-fi and Alternate Universe fantasy fans to enjoy here, and part two is sure to be a whopper. <span class='fw-bold font-italic'> - ManyBooks</span></p>";
+            description = "Nora knows the rules.<p class='mt-2'>Find the time marker, never reveal the secrets of the universe, don't get involved in the time marker's lives.</p> <p class='mt-2'>However, in nearly every single life cycle, they're paired together, when it comes to Mason, she breaks all the rules again and again </p> <p class='mt-2'> She found him when he was twelve. In high school, Nora taught him his place in the universe. And their lives were thoroughly intertwined-now more than ever.</p> <p class='mt-2'>Despite her mistakes, Nora's job was easy enough, until everything took a sharp turn. Mason is angry with her, with the universe telling her who she ought to be. Nora knows her role, and what that responsibility means. She isn't about to start questioning why things are the way they are, though in her heart her efforts are beginning to unfurl a fog over her judgment. To add to their cosmic dysfunction, Mason and Nora are only one time warp away from being discovered by time travelers, who would like nothing more than to see Mason restart a life cycle, or thrown out of time completely.</p> <p class='mt-2'> <span class='fs-5 fw-medium '>Editorial Reviews</span></p> <p class='mt-2'>Rodriguez has an excellent storytelling style with good pacing and panache for some rough and ready action scenes. There s a lot for sci-fi and Alternate Universe fantasy fans to enjoy here, and part two is sure to be a whopper. <span class='fw-bold fst-italic'> — ManyBooks</span></p>";
        }else if (imageSrc.includes('Kidnapped Asylum')) {
             buttonInfo = [
                 { label: "Amazon", link: "https://www.amazon.com/Kidnapped-Asylum-Book-Seekers-ebook/dp/B07QMGCNG2" },
@@ -142,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ];
             description = "Fourteen-year-old John Dolton seems to have it all. The tall, handsome captain of the Rorertown High School basketball team has killer looks, a three-point shot, and now his dream girl—Lisa. But one night changes everything.<p class='mt-2'>Filled with romance and teen humor, Kathryn Cervera’s young adult social issues novel is a fascinating read for high school students everywhere and will resonate with any teen parent.</P>";
         }
-        else if (imageSrc.includes('Life force preserve series 2')) {
+        else if (imageSrc.includes('( Life Force Preserve ) West End William')) {
             buttonInfo = [
                 { label: "Amazon", link: "https://www.amazon.com/Life-Force-Preserve-Book-William-ebook/dp/B09KMMSHZ5?ref_=ast_author_dp " },
                 { label: "Apple Books", link: "https://books.apple.com/us/book/life-force-preserve-book-2-west-end-william/id1592633630 " },
@@ -152,9 +158,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 { label: "Google Play", link: "https://play.google.com/store/books/details/Courtney_Leigh_Pahlke_Life_Force_Preserve_Book_2_W?id=Ud1KEAAAQBAJ" },
                 { label: "Kobo", link: "  https://www.kobo.com/us/en/ebook/life-force-preserve-book-2-west-end-william " }
             ];
-            description = "William Norwick's life collapses after witnessing a traumatic fatality the Scottish Police concluded was an accident. Troubled by the verdict, William suppresses his memory with substance abuse and destructive behavior as his version included red-eyed, shadowy figures which continue to stalk him since the catastrophe.<p class='mt-2'>When a night of excessive drinking results in public humiliation requiring police attendance to interfere with a covert operation, William faces a sobering reality. He's at the center of a mystery that defies medical science and his next course of action may affect the entire human race.</P><p class='mt-2 fw-bold'>Editorial Reviews </P><p class='mt-2'>There's much to like about West End William, and the novel rewards readers with an exciting and satisfying conclusion.<span class='fw-bold fst-italic'> - IndieReader</span></P>";
+            description = "William Norwick's life collapses after witnessing a traumatic fatality the Scottish Police concluded was an accident. Troubled by the verdict, William suppresses his memory with substance abuse and destructive behavior as his version included red-eyed, shadowy figures which continue to stalk him since the catastrophe.<p class='mt-2'>When a night of excessive drinking results in public humiliation requiring police attendance to interfere with a covert operation, William faces a sobering reality. He's at the center of a mystery that defies medical science and his next course of action may affect the entire human race.</P><p class='mt-2 fs-5 fw-medium'>Editorial Reviews </P><p class='mt-2'>There's much to like about West End William, and the novel rewards readers with an exciting and satisfying conclusion.<span class='fw-bold fst-italic'> — IndieReader</span></P>";
         }
-        else if (imageSrc.includes('Life force preserve series 1')) {
+        else if (imageSrc.includes('( Life Force Preserve ) Anna and the Resurgent of the Precious Blood')) {
             buttonInfo = [
                 { label: "Amazon", link: " https://www.amazon.com/Life-Force-Preserve-Book-Resurgent/dp/1545744130 " },
                 { label: "Apple Books", link: "https://books.apple.com/us/book/life-force-preserve-book-1-anna-and-the/id1462892079" },
@@ -163,11 +169,19 @@ document.addEventListener("DOMContentLoaded", function() {
              
             ];
             description = "Anna confronts the mysterious people blending into events following several near-death incidents, only to learn they’re a part of a worldwide organization that’s been covertly safeguarding her endangered bloodline against another invading presence" +
-            "<p class='mt-2'>Editorial Reviews</p>"+
+            "<p class='mt-2 fs-5 fw-medium'>Editorial Reviews</p>"+
             "<p class='mt-2'>Author Courtney Leigh Pahlke's Life Force Preserve is an eerily suspenseful book that will keep readers guessing with every turn of the page. Recommended for home and school libraries, this book has earned the Literary Classics Seal of Approval.<span class='fw-bold fst-italic'> —  Literary Classics International Book Awards</span></p>" +
 "<p class='mt-2 '>Life Force Preserve is a gripping story that is best experienced by going in with as little foreknowledge as possible...The grittiness and tension draw readers in and keep them engaged right to the end. <span class='fw-bold fst-italic'>— ManyBooks</span></p>"+"<p class='mt-2 fs-5 fw-medium'>Awards & Accolades <i class='fa-solid fa-award  fs-5'></i></p>"+
-"<p class='mt-2 fw-medium'>2019 CLC International Mystery Book of the Year </p>"+"<p class='mt-1 fw-medium'>2019 Chanticleer Global Thriller Award Finalist</p>" ;
+"<p class='mt-2 fw-medium p-0 m-0'>2019 CLC International Mystery Book of the Year </p>"+"<p class='mt-1 fw-medium p-0 m-0'>2019 Chanticleer Global Thriller Award Finalist</p>" ;
         }
+        else if (imageSrc.includes('The Little Black Book of Nasty Spells')) {
+            buttonInfo = [
+                { label: "Apple Books", link: "https://books.apple.com/us/book/the-little-black-book-of-nasty-spells/id1455205941 " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Curse_Queen_The_Little_Black_Book_of_Nasty_Spells?id=FpeLDwAAQBAJ  " },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/the-little-black-book-of-nasty-spells" }
+             
+            ];
+            description = "In a world practically drowning in 'Love and Light' witches, it's hard to find a book of useful spells, that can get the job done. If you've ever been annoyed on social media by people and groups who want to push their own personal morals and beliefs as 'laws' on the whole of Paganism and Witchcraft, this is the book for you. This is a no-holds-barred, karma-free, Law of the Jungle look, into casting spells for revenge, protection, love, and more!" }
         else if (imageSrc.includes('The Magnificent Life of Gravvy Brown')) {
             buttonInfo = [
               
@@ -370,6 +384,87 @@ document.addEventListener("DOMContentLoaded", function() {
             "<p class=''>In Craft Your Calling, Marc Casciani gives you a 30-day warm-up to prepare for a journey to craft your calling. A calling is a worthy occupation where one derives meaning. It requires hunger and passion. It leverages the one true gift we have. We’re all here for a reason. We’re all here to do something great. But it’s not through our job. It’s through our calling. The Bible says in Ephesians 4:1 that we are to “live up to the life which God called you.”</p>"+
             "<p class=''>Marc Casciani as a professional coach has completed the journey upon which you the reader want to embark. He has crafted his calling, and his story uniquely qualifies him to be your coach in this endeavor. This book is not for everyone, but if you commit, then you won’t have to walk your journey alone.</p>"}
         
+          
+            else if (imageSrc.includes("Raising a Healthy Child")) {
+            buttonInfo = [
+                
+            { label: "Amazon", link: "https://www.amazon.com/Raising-Healthy-Child-Techniques-Experiences/dp/154574467X " },
+                { label: "Apple Books", link: "" },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/raising-a-healthy-child-meena-chintapalli/1133795584?ean=9781545744673 " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Dr_Meena_Chintapalli_Raising_a_Healthy_Child_Unive?id=Du-xDwAAQBAJ " },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/raising-a-healthy " },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/raising-a-healthy-child-universal-nurturing-techniques-to-overcome-adverse-childhood-experiences-child-trauma-and-behavior-disorders" }
+            
+          
+            ];
+            description ="The power of brain training through nurture using multisensory integration zero to three years and even up to five years of life is essential to prevent behavior and learning disorders, and youth health-risk behaviors. This book is a humanitarian contribution from the Society for Assistance International (SAI) and the SAI Institute of Educare, with the intention of preventing child trauma and consequent neurodevelopmental and physical disorders.This book is the result of my passion to reach out to all and ensure that every child is born to give something back to society. Every parent loves their progeny and wants to give them the best. I am certain that parents might have read thousands of books filled with suggestions on parenting techniques, regimental reward, and reactive limit-setting techniques. But awareness by parents of giving positive early experiences through nurture will help build holistic, intellectual, and effective personality development extracted from every newborn"+
+             "<p class=''>A knowledgeable parent will seek an education that explains how to nurture and extract inherent potential from each newborn. They will be happy to move away from old theories on raising an infant and will eagerly self-educate to develop the skills to be an effective parent. There is one universal truth that differentiates humanity from the rest of creation. It is only in human beings that the five senses connect the individual to the world with the executive brain, which sits on the top of the eye sockets—orbits—and helps use discrimination and self-regulation to balance all the em</p>"}
+        
+            else if (imageSrc.includes("The Holocaust")) {
+            buttonInfo = [
+                
+            { label: "Amazon", link: "" },
+                { label: "Apple Books", link: "" },
+                { label: "Google Play", link: "" },
+                { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: "" }
+          
+            ];
+            description ="Emerich is my name. I am now an old man, shaped by the experiences that a diverse and rich life has given me. ' Emerich Roth's crime was that he was a Jew. Therefore, he ended up in the Nazi extermination camp. But he escaped both Hitler and death. With his story, Emerich Roth wants to show the incredible power that man possesses. How he can rise from the worst humiliation. And that from the most terrible situations she can develop something positive. Emerich himself is a living example. His story of how he survived the Holocaust is partly black at night, but his outlook on life is bright and optimistic. After fighting for his life in the worst of experiences, he has since dedicated his life to fighting violence, racism and oppression. The strength of his struggle becomes apparent to anyone who takes part in his story of surviving the Holocaust."}
+        
+            else if (imageSrc.includes("Ancient Sauk")) {
+            buttonInfo = [
+                
+            // { label: "Amazon", link: "" },
+            //     { label: "Apple Books", link: "" },
+            //     { label: "Google Play", link: "" },
+            //     { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/ancient-sauk-ojibway-and-winnebago-cosmology-myth-mounds-and-artifacts-a-theory-of-ancestoral-diffusion" }
+          
+            ];
+            description ="This text describes Ojibway, Sauk, and Winnebago (Ho Chunk) Creation Legends, Indian Mounds, and artifacts to describe an east-west trade theory that reflects the development of the Sauk Tribe in America, China, and India. It also describes the use of Indian Mounds as astronomical clocks that physically describe their legends."}
+        
+          
+            else if (imageSrc.includes("River Rock Motorcycle Girl")) {
+            buttonInfo = [
+                
+            // { label: "Amazon", link: "" },
+            //     { label: "Apple Books", link: "" },
+            //     { label: "Google Play", link: "" },
+            //     { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/river-rock-motorcycle-girl" }
+          
+            ];
+            description ="Ellie is a rebellious teenage girl craving for more excitement and freedom. She leaves home and heads toward a popular biker bar called The Clubhouse. Ellie does not receive the warmest of welcomes, but her spunk and determination get her in a local motorcycle gang. On one of her rides, she and her crush Strider venture into a cave. Little does Ellie know, she is about to discover something inside that will change her life forever and that life on the road was not her true calling after all."}
+        
+          
+            else if (imageSrc.includes("Rock Lake's Stellar Pyramids")) {
+            buttonInfo = [
+                
+            // { label: "Amazon", link: "" },
+            //     { label: "Apple Books", link: "" },
+            //     { label: "Google Play", link: "" },
+            //     { label: "eBooks2go", link: "#" },
+                { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/rock-lake-s-stellar-pyramids-legends-of-wisconsin-s-sunken-site-a-preliminary-study " }
+          
+            ];
+            description ="In 1988, a side-scan sonar reading of Rock Lake, Wisconsin's underwater structures was recorded by drivers, under the direction of University of Wisconsin Professor of Civil Engineering Dr. James Scherz. After viewing the image, the author worked with Sac and Fox Nation elders in Wisconsin and Stroud, Oklahoma, to obtain the translations of the Medewigan, or Medicine Lodge. Similar legends are described in Ashinaubig, Menominee, Ojibway, and Winnebago (Ho Chunk) traditions and in an 1890 Ojibway text. However, the oldest written record of the Sauk Tribe is found in an 1100 B.C. Chinese Imperial record that describes the Emperor's notation of similarity in the warriors' archery skills and red-plumed Mohawks, which recalled their own Red Phoenix creation legends."}
+        
+          
+            else if (imageSrc.includes("Testament in black")) {
+            buttonInfo = [
+                
+            {label: "Amazon", link: "https://www.amazon.com/Testament-Black-Brandon-Iwan/dp/1545757143 " },
+                { label: "Apple", link: "https://books.apple.com/us/book/testament-in-black/id6475620083 " },
+                { label: "Google Play", link: "https://play.google.com/store/books/details/Brandon_Iwan_Testament_in_Black?id=0HzsEAAAQBAJ " },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/testament-in-black-brandon-iwan/1144838207?ean=9781545757147" },
+                { label: "eBooks2go", link: " https://www.ebooks2go.com/testament-in-black " },
+                { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/testament-in-black " }
+          
+            ];
+            description ="Testament in black is a terrifying journey to the darkest corners of the mind. The tales and gothic poems you will find here cover unholy actions, evil rituals, stories about anger and despair, and other mind provoking verses. The Testament in Black by Brandon Iwan is a book you can start and stop whenever you want. The stories are episodic so there is no start and no end. These stories are filled with morbid imagery and short enough to capture your attention leaving you wanting more. So come and feed your mind."}
+        
+          
             
         descriptionContainer.innerHTML = `<p>${description}</p>`;
 
@@ -379,6 +474,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Set the HTML content of the buttons div
         buttonsContainer.innerHTML = buttonsHTML;
     }
+    AOS.init();
 });
 </script>
 </body>

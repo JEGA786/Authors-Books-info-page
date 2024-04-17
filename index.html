@@ -10,14 +10,18 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=tato">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 </head>
 <body class="">
 <div class="container d-flex flex-column justify-content-center align-items-center text-center mb-4 ">
-    <h4 class="heading">eBooks2go Family</h4>
+    <h4 data-aos="fade-right"
+    data-aos-duration="2000" class="heading " >eBooks2go Family</h4>
     <div class="slider mt-3" onmouseover="pauseSlider()" onmouseout="resumeSlider()">
-        <div class="slide-track" id="slideTrack">
+        <div  class="slide-track" id="slideTrack"  data-aos="zoom-in"
+        data-aos-duration="2000">
             <!-- Insert your images here -->
             <!-- Example: -->
             <div class="slide">
@@ -46,7 +50,7 @@
             </div>
             <div class="slide">
                 <img src="/images/Cervera LinkedIn Image.png" alt="Author Image">
-                <div class="img-alt">Cervera</div>
+                <div class="img-alt">Kathryn Cervera</div>
             </div>
             <div class="slide">
                 <img src="/images/Courtney Pahlke Amazon Author Photo.png" alt="Author Image">
@@ -66,7 +70,7 @@
             </div>
             <div class="slide">
                 <img src="/images/Garbis Author Picture Bright.png" alt="Author Image">
-                <div class="img-alt">Louis Garbis</div>
+                <div class="img-alt text-dark">Louis Garbis</div>
             </div>
             <div class="slide">
                 <img src="/images/Gracelyn Keys.png" alt="Author Image">
@@ -90,7 +94,7 @@
             </div>
             <div class="slide">
                 <img src="/images/Karen J Roberts Author Picture.png" alt="Author Image">
-                <div class="img-alt">Karen J Roberts</div>
+                <div class="img-alt text-dark">Karen J Roberts</div>
             </div>
             <div class="slide">
                 <img src="/images/Kathy Bornino FB Image.png" alt="Author Image">
@@ -113,12 +117,12 @@
                 <div class="img-alt">Dr MeenaChintapalli</div>
             </div>
             <div class="slide">
-                <img src="/images/portra-tt-av-emerich-.png" alt="Author Image">
-                <div class="img-alt">Portra tt AV Emerich</div>
+                <img src="/images/J.Price.png" alt="Author Image">
+                <div class="img-alt">J.Price</div>
             </div>
             <div class="slide">
-                <img src="/images/river-rock-motorcycle-girl.png" alt="Author Image">
-                <div class="img-alt">River Rock</div>
+                <img src="/images/Emerich Roth.png" alt="Author Image">
+                <div class="img-alt">Emerich Roth</div>
             </div>
             <div class="slide">
                 <img src="/images/Sally Veillette Amazon Picture.png" alt="Author Image">
@@ -128,6 +132,7 @@
                 <img src="/images/Karen J Roberts Author Picture.png" alt="Author Image">
                 <div class="img-alt">Karen J Roberts</div>
             </div>
+            
             <div class="slide">
                 <img src="/images/Kathy Bornino FB Image.png" alt="Author Image">
                 <div class="img-alt">Kathy Bornino</div>
@@ -144,15 +149,19 @@
         </div>
     </div>
 
-    <h4 class="heading mt-3">Our Authors</h4> 
-    <p class="col-lg-10 col-12 paragraph">Discover the vibrant personalities behind eBooks2go. Our diverse family of authors brings an array of captivating stories to life. From thrilling adventures to heartwarming tales, each author contributes their unique voice to the world of literature. Explore their inspiring journeys and the stories they have to share. Embark on a reading adventure with the Ebooks2go Family today!</p>
-    <div class="home-authors d-flex justify-content-around flex-wrap mt-4">
+    <h4 data-aos="fade-right"
+    data-aos-duration="2000" class="heading mt-3">Our Authors</h4> 
+    <p data-aos="fade-left"
+    data-aos-duration="2000" class="col-lg-10 col-12 paragraph">Discover the vibrant personalities behind eBooks2go. Our diverse family of authors brings an array of captivating stories to life. From thrilling adventures to heartwarming tales, each author contributes their unique voice to the world of literature. Explore their inspiring journeys and the stories they have to share. Embark on a reading adventure with the Ebooks2go Family today!</p>
+    <div data-aos="fade-up"
+    data-aos-duration="2000" class="home-authors d-flex justify-content-around flex-wrap mt-4">
 
     </div>
     <a href="/authors.html" class="mt-4"><button class="see-all">See All</button></a>
 </div>
 
 <script>
+    
     // Function to fetch the first 9 items from author.html and populate .home-authors
     document.addEventListener("DOMContentLoaded", function() {
         const items = [
@@ -162,7 +171,7 @@
             { title: "Brandi Parsons", image: "/images/Brandi Parsons.png" },
             { title: "Brant Vickers", image: "/images/Brant Vickers.png" },            
             { title: "Dr.Carolyn Scott", image: "/images/Carolyn Scott FB Picture.png" },
-            { title: "Kathryn Cerver", image: "/images/Cervera LinkedIn Image.png" },
+            { title: "Kathryn Cervera", image: "/images/Cervera LinkedIn Image.png" },
             { title: "Courtney Pahlke", image: "/images/Courtney Pahlke Amazon Author Photo.png" },
             { title: "Curse Queen", image: "/images/Curse Queen Author Picture.png" },
            
@@ -179,7 +188,7 @@
                 itemDiv.classList.add("item");
                 const authorPageUrl = `author_info.html?title=${item.title}&image=${item.image}`;
                 itemDiv.innerHTML = `
-                    <a class="" href="${authorPageUrl}">
+                    <a  class="" href="${authorPageUrl}" >
                         <div class="author">
                             <div class="author-img-div ">
                                 <img src="${item.image}" alt="${item.title}">
@@ -215,6 +224,7 @@
             animationPaused = false;
         }
     }
+    AOS.init();
 </script>
 </body>
 </html>

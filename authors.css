@@ -28,12 +28,16 @@ font-weight: 600 !important;
 font-weight: 600 !important;
 }
 .book-name{
+  text-transform: uppercase;
+  color: var(--text-color-black);
+  /* text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 25px var(--primary-color), 0 0 5px var(--primary-light); */
   margin-top: 10px;
   text-align: center;
   font-size: 17px !important;
 font-weight: 600 !important;
 }
   .paragraph{
+    text-justify: auto !important;
     font-size:clamp(11px,6vw,14px) !important;
     line-height: 23px;
     /* text-indent: 50px; */
@@ -51,11 +55,10 @@ font-weight: 600 !important;
   
   a:link {
     text-decoration: none!important;
-  
   }
   
   .pagination button{
-    background:var(--primary-color);
+    background:var(--primary-light);
     border: none;
     min-width: 35px;
     height: 35px;
@@ -63,12 +66,18 @@ font-weight: 600 !important;
     font-weight: 700 !important;
     transition: all 0.5s ease-in-out;
   }
-  .pagination button:hover{
+  .pagination button:hover {
   background:var(--primary-light);
   box-shadow: 0 0 15px #e1b070;
   border: 1px var(--primary-color) solid;
   transform: scale(1.07);
   }
+  .pagination button.active {
+        background-color: var(--primary-color) !important;
+        box-shadow: 0 0 15px #e1b070;
+  border: 1px var(--primary-color) solid;
+  transform: scale(1.07);
+      }
 
   .item-container {
     margin-bottom: 20px;
@@ -139,7 +148,7 @@ font-weight: 600 !important;
     margin-top: 10px;
     font-size: 25px !important;
     font-weight: 600;
-    color: var(--primary-color);
+    /* color: var(-); */
   }
   
   .pagination {
@@ -296,9 +305,7 @@ transition: all 0.5s ease-in-out;
  .buttonInfo{
   background: #000;
  }
- #authorInfo .author-description{
-  /* width: 650px !important; */
- }
+
  .author-book-img{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
  }
@@ -380,4 +387,9 @@ transition: all 0.5s ease-in-out;
 text-align: center !important;
 
  }
+}
+@media screen and (min-width:680px) {
+  #authorInfo .author-description{
+    width: 650px !important;
+   }
 }

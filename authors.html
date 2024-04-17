@@ -19,6 +19,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -26,15 +27,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 
 <div id="contentContainer" class="container mt-5 ">
   <div class="d-flex justify-content-center col-12 row px-0  py-4 ">
-    <h4 class="d-flex heading justify-content-lg-end justify-content-center col-lg-6 col-md-6 col-12">Our Authors</h4>
-    <div class="search-div d-flex  justify-content-lg-end justify-content-center align-items-center col-lg-5 col-md-5 col-12 ">
+    <h4 data-aos="fade-right"
+    data-aos-duration="2000" class="d-flex heading justify-content-lg-end justify-content-center col-lg-6 col-md-6 col-12">Our Authors</h4>
+    <div data-aos="fade-left"
+    data-aos-duration="2000" class="search-div d-flex  justify-content-lg-end justify-content-center align-items-center col-lg-5 col-md-5 col-12 ">
       <input class="" type="text" id="searchInput" placeholder="Search...">
     </div>
   </div>
-  <div class="item-container mt-4 d-flex justify-content-around" id="itemContainer">
+  <div data-aos="fade-up"
+  data-aos-duration="2000" class="item-container mt-4 d-flex justify-content-around" id="itemContainer">
     <!-- Titles, images, and buttons will be dynamically added here -->
   </div>
-  <div class="no-items text-center" id="noItemsMessage" style="display: none;">Please Enter Our Correct Author name</div>
+  <div class="no-items text-center text-danger" id="noItemsMessage" style="display: none;">Please Enter Our Correct Author name
+  </div>
 </div>
 
 <div class="pagination d-flex justify-content-center align-items-center mt-5 mb-5" id="pagination">
@@ -47,33 +52,33 @@ document.addEventListener("DOMContentLoaded", function() {
   { title: "Alia Almoayed", image: "/images/Alia Almoayed FB Pic.png" },
   { title: "Antoine D.Moss", image: "/images/antoine.png" },
     { title: "Alex Rodriguez", image: "/images/Alex Rodriguez.png" },
-            { title: "Brandi Parsons", image: "/images/Brandi Parsons.png" },
-            { title: "Brant Vickers", image: "/images/Brant Vickers.png" },            
-            { title: "Dr.Carolyn Scott", image: "/images/Carolyn Scott FB Picture.png" },
-            { title: "Kathryn Cerver", image: "/images/Cervera LinkedIn Image.png" },
-            { title: "Courtney Pahlke", image: "/images/Courtney Pahlke Amazon Author Photo.png" },
-            { title: "Curse Queen", image: "/images/Curse Queen Author Picture.png" },
-            { title: "Deanna King", image: "/images/Deanna King FB Photo.png" },
-            { title: "Devaughn Lily", image: "/images/Devaughn Lily FB Pic.png" },
-            { title: "Gracelyn Keys", image: "/images/Gracelyn Keys.png" },
-            { title: "Jason Ranieri", image: "/images/Jason Ranieri FB Image.png" },
-            { title: "Jay payleitner", image: "/images/jay-payleitner-isolated.png" },
-            { title: "John Morgan Mullen", image: "/images/John Morgan Mullen.png" },
-            { title: "Josef Tsau", image: "/images/Josef Tsau Amazon Picture.png"},
-            { title: "Karen J Roberts", image: "/images/Karen J Roberts Author Picture.png"},
-            { title: "Kathy Bornino", image: "/images/Kathy Bornino FB Image.png"},
-            { title: "Leonard H. Roberts", image: "/images/Len Roberts FB Image.png"},
-            { title: "Louis Garbis", image: "/images/Garbis Author Picture Bright.png" },
-            { title: "Lynda Vialet", image: "/images/Lynda Vialet FB Picture.png"},
-            { title: "Marc Casciani", image: "/images/Marc Casciani Publishizer Image.jpg"},
-            { title: "Dr Meena Chintapalli", image: "/images/Meena Chintapalli LinkedIn Photo.png"},
-            { title: "Portra TT AV Emerich", image: "/images/portra-tt-av-emerich-.png"},
-            { title: "River Rock Motorcycle", image: "/images/river-rock-motorcycle-girl.png"},
-            { title: "Sally Veillette", image: "/images/Sally Veillette Amazon Picture.png"},  
-            { title: "Brandon Iwan", image: "/images/Brandon Iwan.png" }
+  { title: "Brandi Parsons", image: "/images/Brandi Parsons.png" },
+  { title: "Brant Vickers", image: "/images/Brant Vickers.png" },  
+  { title: "Dr.Carolyn Scott", image: "/images/Carolyn Scott FB Picture.png" },
+  { title: "Kathryn Cervera", image: "/images/Cervera LinkedIn Image.png" },
+  { title: "Courtney Pahlke", image: "/images/Courtney Pahlke Amazon Author Photo.png" },
+  { title: "Curse Queen", image: "/images/Curse Queen Author Picture.png" },
+  { title: "Deanna King", image: "/images/Deanna King FB Photo.png" },
+  { title: "Devaughn Lily", image: "/images/Devaughn Lily FB Pic.png" },
+  { title: "Gracelyn Keys", image: "/images/Gracelyn Keys.png" },
+  { title: "Jason Ranieri", image: "/images/Jason Ranieri FB Image.png" },
+  { title: "Jay payleitner", image: "/images/jay-payleitner-isolated.png" },
+  { title: "John Morgan Mullen", image: "/images/John Morgan Mullen.png" },
+  { title: "Josef Tsau", image: "/images/Josef Tsau Amazon Picture.png"},
+  { title: "Karen J Roberts", image: "/images/Karen J Roberts Author Picture.png"},
+  { title: "Kathy Bornino", image: "/images/Kathy Bornino FB Image.png"},
+  { title: "Leonard H. Roberts", image: "/images/Len Roberts FB Image.png"},
+  { title: "Louis Garbis", image: "/images/Garbis Author Picture Bright.png" },
+  { title: "Lynda Vialet", image: "/images/Lynda Vialet FB Picture.png"},
+  { title: "Marc Casciani", image: "/images/Marc Casciani Publishizer Image.jpg"},
+  { title: "Dr Meena Chintapalli", image: "/images/Meena Chintapalli LinkedIn Photo.png"},
+  { title: "Emerich Roth", image: "/images/Emerich Roth.png"},
+  { title: "J.Price", image: "/images/J.Price.png"},
+  { title: "Sally Veillette", image: "/images/Sally Veillette Amazon Picture.png"},  
+  { title: "Brandon Iwan", image: "/images/Brandon Iwan.png" }
           
 ]
-  const itemsPerPage = 9;
+const itemsPerPage = 9;
   let currentPage = 1;
   let currentItems = items; // Initialize with all items
   const itemContainer = document.getElementById("itemContainer");
@@ -94,13 +99,13 @@ document.addEventListener("DOMContentLoaded", function() {
       itemDiv.innerHTML = `
         <a class="" href="${authorPageUrl}">
           <div class="author">
-         <div class="author-img-div"> <img  src="${item.image}" alt="${item.title}"></div>
-          <div class="item-content">
-            <p class="title text-dark fw-bold  mt-2 author-name">${item.title}</p>
-          </div>
-          <div class="mt-2 text-dark p-0 m-0 get-to-know ">Get To Know
-            <i class="fa fa-arrow-circle-right"></i>
-          </div>
+            <div class="author-img-div"> <img src="${item.image}" alt="${item.title}"></div>
+            <div class="item-content">
+              <p class="title text-dark fw-bold mt-2 author-name">${item.title}</p>
+            </div>
+            <div class="mt-2 text-dark p-0 m-0 get-to-know ">Get To Know
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
           </div>
         </a>
       `;
@@ -126,12 +131,16 @@ document.addEventListener("DOMContentLoaded", function() {
         updatePaginationButtons();
       });
       pagination.appendChild(button);
+
+      // Add active class to current page button
+      if (i === currentPage) {
+        button.classList.add("active");
+      }
     }
 
     // Add previous button
     const prevButton = document.createElement("button");
     prevButton.textContent = "<";
-   
     prevButton.addEventListener("click", function() {
       if (currentPage > 1) {
         currentPage--;
@@ -184,6 +193,8 @@ document.addEventListener("DOMContentLoaded", function() {
     handleSearch();
   });
 });
+
+AOS.init();
 </script>
 
 </body>

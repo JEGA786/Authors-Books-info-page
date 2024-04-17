@@ -18,23 +18,29 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <div class="container  d-flex flex-column align-items-center py-4 pb-5">
-      <h4 class="heading">Author Information</h4>
-      <div
+    <div class="container d-flex flex-column align-items-center py-4 pb-5">
+      <h4 data-aos="fade-right"
+      data-aos-duration="2000" class="heading">Author Information</h4>
+      <div data-aos="fade-up"
+      data-aos-duration="2000"
         id="authorInfo"
         class="d-flex gap-lg-5 gap-3 mt-lg-0 mt-5 text-lg-start text-center flex-wrap justify-content-center align-items-center"
       >
         <!-- Author image and title will be dynamically added here -->
       </div>
-      <h4 class="author-book-heading mt-4 text-dark"></h4>
-      <div
+      <h4  class="author-book-heading mt-4 text-dark"></h4>
+      <div 
         class="book-img mt-5 d-flex gap-5 flex-wrap justify-content-center align-items-center"
       >
-        <div class="book-img-1"></div>
-        <div class="book-img-2"></div>
-        <div class="book-img-3"></div>
+        <div data-aos="fade-up"
+        data-aos-duration="2000" class="book-img-1"></div>
+        <div data-aos="fade-up"
+        data-aos-duration="2000" class="book-img-2"></div>
+        <div data-aos="fade-up"
+        data-aos-duration="2000" class="book-img-3"></div>
       </div>
     </div>
     <script>
@@ -45,89 +51,97 @@
 
         const descriptions = {
           "Alia Almoayed":
-            "Alia Almoayed is a Nutritional Therapist running a busy nutrition consultancy in the Kingdom of Bahrain, offering nutrition advice to the Middle East community and beyond.  She writes health articles for various publications, runs TV and radio programmes on health and nutrition, holds lectures and seminars on the subject, and heads a number of weight loss projects.  Alia is the author of I Want Healthy Kids, a book on how to raise healthy children, The Dream Body Eating Plan, a weight loss guide, and I Want a Healthy Pregnancy, a book on how to enjoy natural pregnancy and childbirth; she is also co-author of 101 Ways To Improve Your Health.<br><p class='mt-2'>Alia hosts DARE TO BE HEALTHY, an internet health show on www.DareToBeHealthy.com and runs an active blog on www.AliaAlmoayedBlog.com.  For more information, to book appointments, to get regular email health tips, or to request Alia’s special FREE Report entitled: 5 Secrets Your Doctor Won’t Tell You About Your Health, visit <a> http://www.AliaAlmoayed.com </a> .</p>",
+            "Alia Almoayed is a Nutritional Therapist running a busy nutrition consultancy in the Kingdom of Bahrain, offering nutrition advice to the Middle East community and beyond.  She writes health articles for various publications, runs TV and radio programmes on health and nutrition, holds lectures and seminars on the subject, and heads a number of weight loss projects.  Alia is the author of I Want Healthy Kids, a book on how to raise healthy children, The Dream Body Eating Plan, a weight loss guide, and I Want a Healthy Pregnancy, a book on how to enjoy natural pregnancy and childbirth; she is also co-author of 101 Ways To Improve Your Health.<br><p class='mt-2'>Alia hosts DARE TO BE HEALTHY, an internet health show on www.DareToBeHealthy.com and runs an active blog on www.AliaAlmoayedBlog.com.  For more information, to book appointments, to get regular email health tips, or to request Alia’s special FREE Report entitled: 5 Secrets Your Doctor Won’t Tell You About Your Health, visit <a  href='http://www.AliaAlmoayed.com'class=''> http://www.AliaAlmoayed.com </a> .</p>",
           "Antoine D.Moss":
             "Since 2006 Antoine has been employed by NASA Glenn Research Center where he once helped design an innovative leadership development program for NASA's employees. Antoine initially stared working with NASA as an intern, but subsequently landed a full-time job with NASA as a result of his stellar high performance during his internship.<br><p class='mt-2'>Over the years Antoine has been privileged to develop a powerful network of highly successful professionals. His network of high performers is comprised of astronauts, millionaires, U.S. Congressional officials, FBI agents, famous celebrities, past NBA & NFL players, doctors, authors, senior executives, and national business moguls. From these transformational encounters Antoine learned and intensely continues to study the attributes of high performance, and he began to put his knowledge into practice to achieve extraordinary success. As a result, Antoine created his high performance C.E.O. Maximum Achievement System that empowers young professionals to accelerate personal achievement, career advancement, and leadership capabilities.</p>",
           "Alex Rodriguez":
             "Born and raised in the Chicagoland area, Alex Rodriguez grew up inspired by action-packed stories of science fiction and the adventures of superheroes. She graduated with a Bachelor's degree in Psychology.<br><p class='mt-2'>Now a Wisconsin resident, Alex enjoys spending time with family and friends, walking her dog Titan, attending writing classes, and discovering new books/TV shows to fall in love with. </p>",
           "Brandi Parsons":
             "Brandi Parsons has been interested in social justice issues for more than two decades. Kidnapped Asylum is her debut book which she hopes will shed some light on the complicated issue of immigration in the United States. She currently lives in Cedar Rapids, Iowa with her family",
-          "Brant Vickers": "",
+          "Brant Vickers":
+            "Brant Vickers has had several careers in his life. He started as a caddy and then delivered flowers before going into the military. He later found his true profession and vocation working with students with special needs. His favorite thing now is writing stories for young adults.",
           "Dr.Carolyn Scott":
             "Dr. Carolyn Scott is a retired educator of 35 years. She spent her entire 35 years as a teacher and administrator in both traditional and non-traditional school settings, working with students identified as having learning difficulties. The first twenty years were spent with the Hillsborough County School System. Her last 15 years was spent at a charter school that was designed to help children who had learning difficulties in grades Kindergarten through 12th grade. The experience of working with these wonderful, creative and imaginative students is what instilled in her the passion to continue to find ways to help these students.<p class='mt-2'>When Pahlke is not brainstorming the next plot for the Life Force Preserve series, she is growing her father’s empire with her brother Garrett at Top Coverage, taking pictures of food or taking a crack at a new recipe.</p><p class=''>Courtney also writes for The SHOP national automotive magazine.</p>",
-          "Kathryn Cerver":
+          "Kathryn Cervera":
             "Kathryn Cervera is the author of the young adult novel Who Is It?, now available at Amazon and at Barnes & Noble bookstores. She enjoys reading, cooking, and spending time with her husband. You'll know she's happy when she's singing and dancing.",
           "Courtney Pahlke":
             "Courtney Pahlke graduated from the University of Iowa with a degree in psychology and a secondary in creative writing. She worked at the Crisis Center in Iowa city leading to graduation day, where she went back home to Illinois with a plan. Courtney hoped to gain her masters degree in forensic psychology at a school in Chicago, while working for her dad, to pay for school. After the first year working for her dad’s company, she decided not to continue on with school and grow the family business instead.",
-       
+
           "Curse Queen":
-            "<p class=''>The Curse Queen was born in Ohio to a family with Witchcraft in their history. Her father was a long time practicing Wiccan, before moving on to darker practices. As of the writing of this book, he is a non-practicing agnostic. Her mother carries folk practices from a long line of female ancestors, both Irish and Native American.</p>"+
-            "<p class=''>Curse Queen has learned since childhood from both sides of her family, including her introduction to Vampires and Blood Magic by her paternal grandmother at a very young age. </p>"+
-            "<p class=''>She has created her own path, from the mix of the many things her family has taught her. She claims no titles and has no initiations into any coven or tradition, though she has aided in the forming of several covens that she subsequently left once they no longer served her best interests.</p>"+
-            "<p class=''>Curse Queen is currently considering accepting students in the near future.</p>"+
+            "<p class=''>The Curse Queen was born in Ohio to a family with Witchcraft in their history. Her father was a long time practicing Wiccan, before moving on to darker practices. As of the writing of this book, he is a non-practicing agnostic. Her mother carries folk practices from a long line of female ancestors, both Irish and Native American.</p>" +
+            "<p class=''>Curse Queen has learned since childhood from both sides of her family, including her introduction to Vampires and Blood Magic by her paternal grandmother at a very young age. </p>" +
+            "<p class=''>She has created her own path, from the mix of the many things her family has taught her. She claims no titles and has no initiations into any coven or tradition, though she has aided in the forming of several covens that she subsequently left once they no longer served her best interests.</p>" +
+            "<p class=''>Curse Queen is currently considering accepting students in the near future.</p>" +
             "<p class=''>You can send questions, comments, feedback, fan mail, hate mail, and more to: </p>",
           "Deanna King":
             "<p class=''>Gracie's Stories is Deanna's first children's book, and her plans are to write a series of Gracie Stories touching on several issues children face as they grow, thru the eyes of Gracie. Deanna lives in Texas with her husband Travis, her biggest fan, and two completely spoiled little dogs.</p>",
-            "Devaughn Lily":
-            "<p class='p-lg-0 m-lg-0 '>Author DeVaughn M. Lilly is a thirty two year old Cleveland native and graduate of Warrensville Heights High School. DeVaughn is a very ambitious exciting young writer and publisher. His goal is to spread the importance of literacy in our communities and what better way to do this than to write inspiring and thrilling new literature. DeVaughn's debut novel; 'The Magnificent Life of Gravvy Brown' was released in '2012' under his own newly established publishing company (Young Revolutionary Publishing Inc.), (eBooks2go).After embarking on his first national book signing tow in the summer of '2012 DeVaughn released his second full length novel, 'Memoirs of the Homosexual President (Told by the First Lady in the summer of '2013'. Then in the fall of '2013 DeVaughn went out on his second national tour.</p>"+
-            "<p class='p-lg-0 m-lg-0 '>DeVaughn who calls himself 'The Voice of a Generation’ has developed his (5 Easy Steps to Creative Writing) which is billed as 'The Return of the Writer'. DeVaughn is currently working on his third full length novel, 'The Conspiracy to Kill Michol A'ngelo' and planning another tour for '2014.</p>"+
+          "Devaughn Lily":
+            "<p class='p-lg-0 m-lg-0 '>Author DeVaughn M. Lilly is a thirty two year old Cleveland native and graduate of Warrensville Heights High School. DeVaughn is a very ambitious exciting young writer and publisher. His goal is to spread the importance of literacy in our communities and what better way to do this than to write inspiring and thrilling new literature. DeVaughn's debut novel; 'The Magnificent Life of Gravvy Brown' was released in '2012' under his own newly established publishing company (Young Revolutionary Publishing Inc.), (eBooks2go).After embarking on his first national book signing tow in the summer of '2012 DeVaughn released his second full length novel, 'Memoirs of the Homosexual President (Told by the First Lady in the summer of '2013'. Then in the fall of '2013 DeVaughn went out on his second national tour.</p>" +
+            "<p class='p-lg-0 m-lg-0 '>DeVaughn who calls himself 'The Voice of a Generation’ has developed his (5 Easy Steps to Creative Writing) which is billed as 'The Return of the Writer'. DeVaughn is currently working on his third full length novel, 'The Conspiracy to Kill Michol A'ngelo' and planning another tour for '2014.</p>" +
             "<p class='p-lg-0 m-lg-0 '> He and business partner and manager Phillip Dickson opened up their first restaurant together in January of 2014, it is named (R & D's World Famous Corned Beef) which is located at 534 East 200 street in Euclid, Ohio 44119.DeVayghn Lilly has carved out his own brand of historical fiction, suspense drama, and what he likes to call true life fiction through his love and passion for storytelling. His ultimate dream and goal in this industry is to make reading 'cool' again by bringing reading back to the forefront of entertainment. DeVaughn will do book signings, public inspirational speeches, forums and book discussions. </p>",
-       
-            "Gracelyn Keys":
-            "<p class='p-lg-0 m-lg-0 '>Gracelyn Keys is a children’s picture book author and a mental wellness advocate. She creates educational and entertaining children's picture books on important neurodiversetopics.</p>"+
-            "<p class='p-lg-0 m-lg-0 '>She is a member of the Society of Children's Book Writers and Illustrators, Story Teller Academy and Shiawassee Area Writers Group. Her first book is titled, 'Knock, Knock, Who’s There, Bear? A Story About Embracing Bipolar Disorder'. More information is available on her Facebook @GracelynKeysAuthor, Instagram @gracelynkeys_author and Pinterest @Gracelyn Keys - Children's Author sites.</p>"+
-            "<p class='p-lg-0 m-lg-0 '>She has a bachelor’s of science degree from the University of Michigan in clinical community psychology and a master’s of science degree in business administration from Central Michigan University. She worked in the human services area for several decades helping families in need move forward, and later, at the statewide level helping program leaders solve important problems..</p>"+
+
+          "Gracelyn Keys":
+            "<p class='p-lg-0 m-lg-0 '>Gracelyn Keys is a children’s picture book author and a mental wellness advocate. She creates educational and entertaining children's picture books on important neurodiversetopics.</p>" +
+            "<p class='p-lg-0 m-lg-0 '>She is a member of the Society of Children's Book Writers and Illustrators, Story Teller Academy and Shiawassee Area Writers Group. Her first book is titled, 'Knock, Knock, Who’s There, Bear? A Story About Embracing Bipolar Disorder'. More information is available on her Facebook @GracelynKeysAuthor, Instagram @gracelynkeys_author and Pinterest @Gracelyn Keys - Children's Author sites.</p>" +
+            "<p class='p-lg-0 m-lg-0 '>She has a bachelor’s of science degree from the University of Michigan in clinical community psychology and a master’s of science degree in business administration from Central Michigan University. She worked in the human services area for several decades helping families in need move forward, and later, at the statewide level helping program leaders solve important problems..</p>" +
             "<p class='p-lg-0 m-lg-0 '>She resides in Michigan, with her husband, her short-legged Dachshund dog, namedBruiser, and many rambunctious chickens. She lives a healthy outdoorsy lifestyle and loves spending time with her family, including eleven very busy, exuberant and fun-loving grandchildren.She resides in Michigan, with her husband, her short-legged Dachshund dog, named Bruiser, and many rambunctious chickens. She lives a healthy outdoorsy lifestyle and loves spending time with her family, including eleven very busy, exuberant and fun-loving grandchildren.</p>",
-       
-            "Jason Ranieri":
-            "<p class=''>Jason D. Ranieri is a graduate of Worcester State University and was Freshman Class President. He graduated Cum Laude in his major, History. He passed the Massachusetts Educator's Exam with a perfect score in Economics. He is a 'Heroes Among Us' award recipient from the Boston Celtics organization for playing Santa Claus for physically and mentally handicapped at Wrentham Developmental Center for over 20 years. He graduated from the Massachusetts Leadership Academy and became a member of the political activist group, M-power. He successfully reinstated Mass.</p>"+
+
+          "Jason Ranieri":
+            "<p class=''>Jason D. Ranieri is a graduate of Worcester State University and was Freshman Class President. He graduated Cum Laude in his major, History. He passed the Massachusetts Educator's Exam with a perfect score in Economics. He is a 'Heroes Among Us' award recipient from the Boston Celtics organization for playing Santa Claus for physically and mentally handicapped at Wrentham Developmental Center for over 20 years. He graduated from the Massachusetts Leadership Academy and became a member of the political activist group, M-power. He successfully reinstated Mass.</p>" +
             "<p class=''>Health coverage of eye and dental exams for those in need through the Mass. House and Senate. He was nominated for the Worcester Telegram and Gazette's Young Leader Award. He is the author of the books, The Good Old World and Polka Dots and Politics. He is a vegetarian, Freemason and avid musician. Jason toured America for a year and a half.</p>",
-           
-            "Jay payleitner":
-            "<p class='p-lg-0 m-lg-0 '>Jay Payleitner spent a decade in major market advertising on Chicago’s Michigan Avenue, where he created award-winning radio, TV, and print campaigns for eggs, steaks, canned vegetables, Kroger, the Chicago Symphony, and Corona Beer. He wrote TV spots with Coach Mike Ditka for Midway Airlines and spearheaded the creative team that named Frito-Lay’s “SunChips.” Following God’s clear call, Jay served two decades as freelance radio producer working with Josh McDowell, Chuck Colson, TobyMac, Bible League, AWANA, National Center for Fathering, and others.</p>"+
-            "<p class='p-lg-0 m-lg-0 '> As an advocate for fathers and families, Jay served as Executive Director for the Illinois Fatherhood Initiative and testified at the 2018 Responsible Fatherhood Listening Summit in Washington. He’s a national speaker on marriage, parenting, and getting life right, and has spoken at Iron Sharpens Iron conferences in 15 states. Most notably, Jay has written more than 25 books including The Prayer of Agur, 52 Things Kids Need from a Dad, What If God Wrote Your Bucket List? and The Jesus Dare (see thejesusdare.com).</p>"+
+
+          "Jay payleitner":
+            "<p class='p-lg-0 m-lg-0 '>Jay Payleitner spent a decade in major market advertising on Chicago’s Michigan Avenue, where he created award-winning radio, TV, and print campaigns for eggs, steaks, canned vegetables, Kroger, the Chicago Symphony, and Corona Beer. He wrote TV spots with Coach Mike Ditka for Midway Airlines and spearheaded the creative team that named Frito-Lay’s “SunChips.” Following God’s clear call, Jay served two decades as freelance radio producer working with Josh McDowell, Chuck Colson, TobyMac, Bible League, AWANA, National Center for Fathering, and others.</p>" +
+            "<p class='p-lg-0 m-lg-0 '> As an advocate for fathers and families, Jay served as Executive Director for the Illinois Fatherhood Initiative and testified at the 2018 Responsible Fatherhood Listening Summit in Washington. He’s a national speaker on marriage, parenting, and getting life right, and has spoken at Iron Sharpens Iron conferences in 15 states. Most notably, Jay has written more than 25 books including The Prayer of Agur, 52 Things Kids Need from a Dad, What If God Wrote Your Bucket List? and The Jesus Dare (see thejesusdare.com).</p>" +
             "<p class='p-lg-0 m-lg-0 '>His books have been translated into nine languages and sold more than a half-million copies. He has been a guest multiple times on The Harvest Show, Moody Radio, and Focus on the Family. Jay and his high school sweetheart, Rita, live in St. Charles, Illinois where they raised five awesome kids, loved on ten foster babies, and are cherishing grandparenthood. For speaking engagements, media interviews, and creative partnership opportunities, track him down at jaypayleitner.com. </p>",
-           
-            "John Morgan Mullen":
-            "<p class=' '>John Morgan Mullen owns a real estate development and consulting company specializing in urban infill, adaptive reuse, historic renovations, and community development properties. Morgan has played a major role in the warehouse loft conversion boom and gentrification of many Chicago neighborhoods valued at over $600 million.</p>"+
-            "<p class=' '> Morgan attended Michigan State University, where he earned a BA in communication arts. He was a quarterback for Michigan State University on two National Championship teams in 1965 and 1966. Morgan credits athletics for honing and developing his dedication to hard work, leadership, teamwork, developing a game plan, and knowing your opponent's strengths and weaknesses as well as your own.</p>"+
+
+          "John Morgan Mullen":
+            "<p class=' '>John Morgan Mullen owns a real estate development and consulting company specializing in urban infill, adaptive reuse, historic renovations, and community development properties. Morgan has played a major role in the warehouse loft conversion boom and gentrification of many Chicago neighborhoods valued at over $600 million.</p>" +
+            "<p class=' '> Morgan attended Michigan State University, where he earned a BA in communication arts. He was a quarterback for Michigan State University on two National Championship teams in 1965 and 1966. Morgan credits athletics for honing and developing his dedication to hard work, leadership, teamwork, developing a game plan, and knowing your opponent's strengths and weaknesses as well as your own.</p>" +
             "<p class=' '>Married to his college sweetheart Jill since 1967, Morgan has two children, Todd and Stephanie. He and Jill are grandparents to Jake, Brennan, and Hailey. </p>",
-           
-            "Josef Tsau":
-            "<p class=' '>Dr. Josef Tsau was born in 1936 in China, brought up in Taiwan, and immigrated to United States in 1970. He became a Ph.D. physical chemist of McGill University, and had a productive R&D career in the pharmaceutical industry. He developed several products, published fourteen papers, and held fourteen U.S. Patents. Tsau retired early in 1996 only to unexpectedly rediscover science and start his scientific revolution with this book. </p>",           
-      
-            "Karen J Roberts":
-            "<p class=' '>Award winning children's book author, Karen J. Roberts, was inspired to write stories promoting animal kindness and responsible pet ownership when she adopted her dog Louie from the Northeast Animal Shelter in Salem Ma. She has 15 books for children of all ages, helping develop a love of nature and animals using themes of friendship, family and teamwork. Karen has collaborated with many talented illustrators bringing bright and fun images to enhance the stories.</p>"+
-            "<p class=' '>Karen is a two-time winner of the Indie Excellence Award, Three-time winner of the Feathered Quill Book Award, two-time winner of the Moonbeam Children's Book Award, a finalist in the International Book Awards, and winner of the eBooks2go Children's Book Contest.</p>"+
+
+          "Josef Tsau":
+            "<p class=' '>Dr. Josef Tsau was born in 1936 in China, brought up in Taiwan, and immigrated to United States in 1970. He became a Ph.D. physical chemist of McGill University, and had a productive R&D career in the pharmaceutical industry. He developed several products, published fourteen papers, and held fourteen U.S. Patents. Tsau retired early in 1996 only to unexpectedly rediscover science and start his scientific revolution with this book. </p>",
+
+          "Karen J Roberts":
+            "<p class=' '>Award winning children's book author, Karen J. Roberts, was inspired to write stories promoting animal kindness and responsible pet ownership when she adopted her dog Louie from the Northeast Animal Shelter in Salem Ma. She has 15 books for children of all ages, helping develop a love of nature and animals using themes of friendship, family and teamwork. Karen has collaborated with many talented illustrators bringing bright and fun images to enhance the stories.</p>" +
+            "<p class=' '>Karen is a two-time winner of the Indie Excellence Award, Three-time winner of the Feathered Quill Book Award, two-time winner of the Moonbeam Children's Book Award, a finalist in the International Book Awards, and winner of the eBooks2go Children's Book Contest.</p>" +
             "<p class=' '>All of the profits from the sale of Karen's books goes towards helping animal rescue groups and literacy programs. Karen's books are written, illustrated, published, printed and shipped in the USA. </p>",
-           
-            "Kathy Bornino":
-            "<p class=' '>KATHY BORNINO, MA, LMFT has been a licensed Marriage and Family Therapist and Clinical Hypnotherapist for 30 years and a Clinical Past Life Regression Therapist certified by the International Board of Regression Therapy for 15 years. Previously she taught high school English for 5 years, and has taught Psychology classes in community colleges. For 25 years she has led a community education group for the Institute of Noetic Sciences, Petaluma California, which does cutting edge research on consciousness and alternative healing (see www.noetic.org)</p>"+
+
+          "Kathy Bornino":
+            "<p class=' '>KATHY BORNINO, MA, LMFT has been a licensed Marriage and Family Therapist and Clinical Hypnotherapist for 30 years and a Clinical Past Life Regression Therapist certified by the International Board of Regression Therapy for 15 years. Previously she taught high school English for 5 years, and has taught Psychology classes in community colleges. For 25 years she has led a community education group for the Institute of Noetic Sciences, Petaluma California, which does cutting edge research on consciousness and alternative healing (see www.noetic.org)</p>" +
             "<p class=' '> She also spent 5 years on the board of the California Central Coast Jung Society and has been an active member of Edgar Cayce study groups.Previous book: 'Armchair Travel to Heal the Planet' (How to send distance healing rather than wailing at the news).</p>",
-           
-            "Leonard H. Roberts":
-            "<p class='p-lg-0 m-lg-0 '>Leonard H. Roberts was born on February 19, 1949. Growing up in Chicago as the son of a Jewish mechanical draftsman, he spent his childhood going to school, playing games in the neighborhood, and confronting bullies and prejudice at a young age. Len married his high school sweetheart—and lifetime love—at the age of 18, and they would later have three daughters together.</p>"+
-            "<p class='p-lg-0  m-lg-0 '>Leonard earned a bachelor's degree in Chemistry and Marketing from the University of Illinois in 1971, and he was a world-acclaimed food scientist by the age of 19. He also earned a law degree from DePaul University Law School and was admitted to the Illinois Bar in 1974. His remarkable career began as a food scientist at Central Soya while a high school senior, and then at Armour Foods, hired there during his junior year of college, and continued at Ralston Purina Company.</p>"+
+
+          "Leonard H. Roberts":
+            "<p class='p-lg-0 m-lg-0 '>Leonard H. Roberts was born on February 19, 1949. Growing up in Chicago as the son of a Jewish mechanical draftsman, he spent his childhood going to school, playing games in the neighborhood, and confronting bullies and prejudice at a young age. Len married his high school sweetheart—and lifetime love—at the age of 18, and they would later have three daughters together.</p>" +
+            "<p class='p-lg-0  m-lg-0 '>Leonard earned a bachelor's degree in Chemistry and Marketing from the University of Illinois in 1971, and he was a world-acclaimed food scientist by the age of 19. He also earned a law degree from DePaul University Law School and was admitted to the Illinois Bar in 1974. His remarkable career began as a food scientist at Central Soya while a high school senior, and then at Armour Foods, hired there during his junior year of college, and continued at Ralston Purina Company.</p>" +
             "<p class='p-lg-0 m-lg-0 '>Leonard made a name for himself in food science, marketing, and food service between 1968 and 1985, serving in key management positions. But his most lauded accomplishments were yet to come: incredible turnarounds at three Fortune 500 companies. First, he served as president and CEO of Arby's, Inc., where he is credited with engineering an acclaimed and dramatic revival of the company. Next, he repeated this feat as chairman and CEO of Shoney's, Inc., leading the second-largest restaurant chain in the country. Then he secured the triple crown with a third turnaround, this time as chairman and CEO of RadioShack Corporation, where he was the catalyst for the successful reinvention of a company. Along the way, he battled the corruption of Miami financier Victor Posner, and the extreme racism of Shoney's founder, Ray Danner, while protecting and promoting the interests of the companies he led, the people they employed, and the customers they served. His vision and leadership elicited major media coverage in outlets like USA Today, Forbes, The Wall Street Journal, Business Week, and others, and brought numerous industry accolades and awards.</p>",
-            
-            "Louis Garbis":
-            "<p class=' '>Louis Garbis has a BS in Business Administration from the University of Illinois, Chicago, and an MBA from Roosevelt university. He has over 30 years of experience in the field of risk management and insurance.</p>"+
+
+          "Louis Garbis":
+            "<p class=' '>Louis Garbis has a BS in Business Administration from the University of Illinois, Chicago, and an MBA from Roosevelt university. He has over 30 years of experience in the field of risk management and insurance.</p>" +
             "<p class=' '>From a young age, Lou has been a student of life, with a heavy focus on world history and other germane areas impacting our planet. 'We learn from the past to better our future.'</p>",
-            
-            
-            "Lynda Vialet":
-            "<p class='p-lg-0 m-lg-0'>Lynda Vialet is a single mother with two sons. She spends most of her time working and providing for her family. She loves to cook; decorate; and host parties, barbeques, and events. She was born and raised in Jamaica, Queens, New York. She grew up in a household where her mother was a stay-at-home mom, and her father worked very hard to provide for and protect the family. She is the second oldest of four and the first girl, so she learned a lot of her nurturing and caring ways from watching her mom take care of not only her and her siblings but a majority of the entire family. Her mom was exclusively known as the family babysitter, so Lynda was raised among all her cousins and even some neighbors. She attended John Adams High School in Ozone Park, New York, and graduated at the age of seventeen with a regent’s diploma.</p>"+
+
+          "Lynda Vialet":
+            "<p class='p-lg-0 m-lg-0'>Lynda Vialet is a single mother with two sons. She spends most of her time working and providing for her family. She loves to cook; decorate; and host parties, barbeques, and events. She was born and raised in Jamaica, Queens, New York. She grew up in a household where her mother was a stay-at-home mom, and her father worked very hard to provide for and protect the family. She is the second oldest of four and the first girl, so she learned a lot of her nurturing and caring ways from watching her mom take care of not only her and her siblings but a majority of the entire family. Her mom was exclusively known as the family babysitter, so Lynda was raised among all her cousins and even some neighbors. She attended John Adams High School in Ozone Park, New York, and graduated at the age of seventeen with a regent’s diploma.</p>" +
             "<p class='p-lg-0 m-lg-0'>Throughout her early career, she focused on the medical field, becoming a medical assistant and then a certified nursing assistant, as it was always her passion to help others. The tragic events depicted in this book, along with her passion, led her toward a career in the human services profession. While working a full-time job and being a full-time mother and grandmother, she decided to show her children that it’s never too late to follow your dreams. In December 2017, she accomplished a longtime goal of earning her college degree. She graduated from Ashford University Online with a bachelor’s degree in health and human services and a 3.36 GPA. She is an entrepreneur and now an accomplished author. She works as a tech support advisor while building a credit restoration agency. She currently resides in Atlanta, Georgia.</p>",
-            
-            
-            "Marc Casciani":
+
+          "Marc Casciani":
             "<p class='p-lg-0 m-lg-0'>Marc Casciani is the founder of MindWolves where he has the opportunity to train professionals to craft their calling. He is part alpha wolf and part caring shepherd. Alpha wolves lead and defend their pack. Caring shepherds correct and heal their flock. The net effect is a courageous and compassionate helper that will help shape you to live up to the life which God called you. </p>",
-            
-            "Dr Meena Chintapalli":
-            "<p class='p-lg-0 m-lg-0'>Dr. Meena Chintapalli came to USA as an 8 year old in 1960 and ever wanted to come back to this beautiful land of opportunities, land of freedom and spirit. Meena Chintapalli always cared for people for helping the patients to learn balancing emotional, social, intellectual and spiritual life. With a lot of hope re-entered USA on March 30th, 1976. She completed Pediatrics residency in Washington D.C 1976-78, and Ambulatory Pediatrics Fellowship of University of Michcigan, Ann Arbor program 1978-1980. Board certified in Pediatrics in 1980 and no boards for Ambulatory pediatrics in those days. She followed her spouse, leaving behind academic interests and worked as clinical instructor MCMC, Milwaukee. Started Pediatrics solo practice in 1983 and had to move again to final destination with her spouse to San Antonio, Texas in 1988. Dr. MC started solo practice again providing medical care and Body-Mind-Soul connection, through her own interest, to all patients and parents who came for medical care. DR. MC held many positions. Was on Quality Assurance programs for Insurance companies, hospitals, Chaired as Pediatrics Director for neuropsychiatric facility; she was voted as the best Pediatrician locally, won woman of the year award in 1995 by San Antonio Mayor's committee, won awards for AACC for Professional and Community service. On March 30th, 2008 received award for Professional Excellence and Leadership from A.M.A. Foundation for incorporating neuroscience knowledge in daily practice and teaching community through T.E.C.P.D.S and for public lectures. Dr. MC is a clinical adjunct at UTHSCSA; trains students and PNP students. Is a Spiritual leader and started and serves through S.A.I, 501C-3 non profit, that does volunteer services at battered woman's shelter, jail district, Salvation Army, Boysville, Bexar county detention center, Children's shelter and many medical missions. In 2010 was chosen as the World Physician. Is recognized by International, America's and Marqui's Who's Who 2004-2008.Wrote her first book on brain nurture from all evidence based medical literature review and integrated Spirituality and gave the curriculum that is a multi sensory integration for Body-Mind-Soul connection in 2004 titled 'Brain, Mind, SAI Educare.'The second book is with the knowledge of how children need to be protected from Zero to 3 years and create pathways for better states, traits and future. Dr. Chintapalli hopes to reach to educators, administrators and parents through this book so that we create A BETTER WORLD WITH PREVENTIVE MEASURES FOR SPECTRUM, ADHD and Learning disorders.This third book is a revision of the second book.She developed scales for measuring human character on the 4 tenets that she worked on, was given in the very first publication, and will present in the future along with ctrauma focused Cognitive Behavior management strategies.</p>",
-          };
-          
-          const authorInfoDiv = document.getElementById("authorInfo");
+
+          "Dr Meena Chintapalli":
+            "<p class='p-lg-0 m-lg-0'>Dr. Meena Chintapalli came to USA as an 8 year old in 1960 and ever wanted to come back to this beautiful land of opportunities, land of freedom and spirit. Meena Chintapalli always cared for people for helping the patients to learn balancing emotional, social, intellectual and spiritual life. With a lot of hope re-entered USA on March 30th, 1976. She completed Pediatrics residency in Washington D.C 1976-78, and Ambulatory Pediatrics Fellowship of University of Michcigan, Ann Arbor program 1978-1980. Board certified in Pediatrics in 1980 and no boards for Ambulatory pediatrics in those days. She followed her spouse, leaving behind academic interests and worked as clinical instructor MCMC, Milwaukee. Started Pediatrics solo practice in 1983 and had to move again to final destination with her spouse to San Antonio, Texas in 1988.DR. MC held many positions. Was on Quality Assurance programs for Insurance companies, hospitals, Chaired as Pediatrics Director for neuropsychiatric facility; she was voted as the best Pediatrician locally, won woman of the year award in 1995 by San Antonio Mayor's committee, won awards for AACC for Professional and Community service. On March 30th, 2008 received award for Professional Excellence and Leadership from A.M.A. Foundation for incorporating neuroscience knowledge in daily practice and teaching community through T.E.C.P.D.S and for public lectures.</p>" +
+            "<p class='py-lg-2'>Dr. MC is a clinical adjunct at UTHSCSA; trains students and PNP students. Is a Spiritual leader and started and serves through S.A.I, 501C-3 non profit, that does volunteer services at battered woman's shelter, jail district, Salvation Army, Boysville, Bexar county detention center, Children's shelter and many medical missions. In 2010 was chosen as the World Physician. Is recognized by International, America's and Marqui's Who's Who 2004-2008.Wrote her first book on brain nurture from all evidence based medical literature review and integrated Spirituality and gave the curriculum that is a multi sensory integration for Body-Mind-Soul connection in 2004 titled 'Brain, Mind, SAI Educare.'The second book is with the knowledge of how children need to be protected from Zero to 3 years and create pathways for better states, traits and future. Dr. Chintapalli hopes to reach to educators, administrators and parents through this book so that we create A BETTER WORLD WITH PREVENTIVE MEASURES FOR SPECTRUM, ADHD and Learning disorders.This third book is a revision of the second book.She developed scales for measuring human character on the 4 tenets that she worked on, was given in the very first publication, and will present in the future along with ctrauma focused Cognitive Behavior management strategies.</p>",
+          "Emerich Roth":
+            "<p class='p-lg-0 m-lg-0'>Emerich Roth, born in 1924, came to Sweden in December 1950 after miraculously surviving the barbarism of Nazism in five different concentration camps. He co-founded the Association of Holocaust Survivors with the aim of spreading knowledge - mainly in schools - about the events during World War II and preventing racism from gaining a foothold in our society. With 30 years of experience in social care among excluded and hateful people, he knows that there is a way out of hatred. - Most of the excluded young people find it terribly difficult to be constantly filled with hatred and to be hated by others. Deep down, most people want to meet someone who understands what it's really about, someone who helps them become the person they deep down want to be. These are truths I have experienced in encounters with young people who have dropped out of various destructive gangs. Since 1992, Emerich Roth has lectured in schools around Sweden. Lectures and conversations with students at over 1600 schools have left a strong impression. Over the years, Emerich has received many thousands of letters, in which the students he met open up and tell about their reactions, describe their own lives and experiences of, among other things. violence and bullying. Emerich often lectures together with former so-called Nazis / racists who make a valuable contribution in the fight to turn hatred and violence into tolerance and compassion.</p>" +
+            "<p class='py-lg-2'>Emerich Roth founded EXIT to support destructive and violent young people breaking away from gangs and crime. Sadly, Emerich passed away in January of 2022 at 97 years old. His diligent work in schools against violence, xenophobia, hatred, and bullying has over the years received great media attention. Emerich has received several awards for his tireless efforts. In 2008 he was awarded the Nelson Mandela Prize, and in 2011 the Knowledge Prize with the motivation: 'Because he with admirable perseverance spreads knowledge about how we can counter violence, racism and hate crimes. With his background from the Nazi concentration camps, he has great credibility when he in books, in associations and above all through countless visits to schools in front of their message '. In 2012, Emerich Roth received the Swedish Heroes' Life Deed 2012 award, which is arranged by Aftonbladet and broadcast on TV4.</p>",
+
+          "J.Price":
+            "<p class='p-lg-0 m-lg-0'></p>" + "<p class='p-lg-0 m-lg-0'></p>",
+          "Brandon Iwan":
+            "<p class='p-lg-0 m-lg-0'>Brandon Iwan is an up-and-coming author with a passion for his work and darker and mysterious expressions. His first book, Testament in Black, was written with great thought, and he would love to share it with you all.</p>",
+        };
+
+        const authorInfoDiv = document.getElementById("authorInfo");
         if (title && image) {
           // Author information exists, proceed with rendering
 
@@ -141,10 +155,18 @@
           authorInfoDiv.appendChild(imageDiv);
 
           // Set the content of .author-book-heading div
-          const authorBookHeadingDiv = document.querySelector(
-            ".author-book-heading"
-          );
-          authorBookHeadingDiv.textContent = title + " Book";
+          // const authorBookHeadingDiv = document.querySelector(
+          //   ".author-book-heading"
+          // );
+          // authorBookHeadingDiv.textContent = ;
+          
+          // Set the content of .author-book-heading div
+const authorBookHeadingDiv = document.querySelector(".author-book-heading");
+if (title === "Courtney Pahlke" || title === "J.Price"|| title === "Karen J Roberts") {
+    authorBookHeadingDiv.textContent = title + "'s Books";
+} else {
+  authorBookHeadingDiv.textContent = title+"'s" + " Book"; // Hide the heading for other authors
+}
 
           // Create a div for the author details
           const detailsDiv = document.createElement("div");
@@ -159,13 +181,12 @@
           descriptionParagraph.classList.add(
             "author-description",
             "mt-3",
-            "paragraph",
+            "paragraph"
           );
           descriptionParagraph.innerHTML =
             descriptions[title] || "Description not available";
           detailsDiv.appendChild(descriptionParagraph);
 
-          
           // Add social media links
           const socialMediaDiv = document.createElement("div");
           socialMediaDiv.classList.add("social_media", "mt-4");
@@ -193,26 +214,22 @@
                     `;
           } else if (title === "Brandi Parsons") {
             socialMediaDiv.innerHTML = `
-                    <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                   
+                    <a href="https://www.facebook.com/brant.vickers.3/"><i class="fa-brands fa-facebook"></i></a>
+                  
                     `;
           } else if (title === "Brant Vickers") {
             socialMediaDiv.innerHTML = `
-                    <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/brant.vickers.3/"><i class="fa-brands fa-facebook"></i></a>
                     `;
-          } else if (title === "Dr.Carolyn Scott") {
-            socialMediaDiv.innerHTML = `
-                    <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    `;
-          } else if (title === "Kathryn Cerver") {
+          // } else if (title === "Dr.Carolyn Scott") {
+          //   socialMediaDiv.innerHTML = `
+          //           <a href="#"><i class="fa-solid fa-globe"></i></a>
+          //           <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          //           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          //           <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          //           `;
+          } else if (title === "Kathryn Cervera") {
             socialMediaDiv.innerHTML = `
                     <a href="https://www.facebook.com/kathryncerveraauthor/ "><i class="fa-brands fa-facebook"></i></a>
                     <a href=" https://www.instagram.com/kathryncervera6/ "><i class="fa-brands fa-instagram"></i></a>
@@ -230,94 +247,108 @@
             <a href="Author.Curse.Queen@Gmail.com"><i class="fa-regular fa-envelope"></i></a>
                     <a href="https://www.facebook.com/Author.Curse.Queen "><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/curse.queen/ "><i class="fa-brands fa-instagram"></i></a>
-                   `
-          }else if (title === "Deanna King") {
+                   `;
+          // } else if (title === "Deanna King") {
+          //   socialMediaDiv.innerHTML = `
+          //            <a href="#"><i class="fa-solid fa-globe"></i></a>
+          //           <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          //           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          //           <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          //           `;
+          } else if (title === "Devaughn Lily") {
             socialMediaDiv.innerHTML = `
-                     <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    `;
-          } 
-          else if (title === "Devaughn Lily") {
-            socialMediaDiv.innerHTML = `
-                    <a href=" https://www.facebook.com/devaughn.lilly "><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/DeVaughnLilly"><i class="fa-brands fa-x-twitter"></i></a>
-                    `;
-          } 
-          else if (title === "Gracelyn Keys") {
+            <a href=" https://www.facebook.com/devaughn.lilly "><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/DeVaughnLilly"><i class="fa-brands fa-x-twitter"></i></a>
+            `;
+          } else if (title === "Gracelyn Keys") {
             socialMediaDiv.innerHTML = `
             <a href="https://gracelynkeyskids.com/ "><i class="fa-solid fa-globe"></i></a>
-                    <a href=" https://www.facebook.com/GracelynKeysAuthor "><i class="fa-brands fa-facebook"></i></a>
-                    <a href=" https://www.instagram.com/gracelynkeys_author/"><i class="fa-brands fa-instagram"></i></a>
-                    `;
-          }  else if (title === "Jason Ranieri") {
+            <a href=" https://www.facebook.com/GracelynKeysAuthor "><i class="fa-brands fa-facebook"></i></a>
+            <a href=" https://www.instagram.com/gracelynkeys_author/"><i class="fa-brands fa-instagram"></i></a>
+            `;
+          } else if (title === "Jason Ranieri") {
             socialMediaDiv.innerHTML = `
                     <a href=" https://www.facebook.com/devaughn.lilly "><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://twitter.com/DeVaughnLilly"><i class="fa-brands fa-x-twitter"></i></a>
                     `;
-          }
-            else if (title === "Jay payleitner") {
+          } else if (title === "Jay payleitner") {
             socialMediaDiv.innerHTML = `
             <a href="#"><i class="fa-brands fa-goodreads"></i></a>
             <a href="https://jaypayleitner.com/ "><i class="fa-solid fa-globe"></i></a>
-                    <a href="https://www.facebook.com/jaykpayleitner "><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/jaypayleitner "><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/channel/UC5U-CJJ-6d_ykbZI_GA-x7w/featured"><i class="fa-brands fa-youtube"></i></a>
-                    `;
-          }
-            else if (title === "John Morgan Mullen") {
+            <a href="https://www.facebook.com/jaykpayleitner "><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/jaypayleitner "><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UC5U-CJJ-6d_ykbZI_GA-x7w/featured"><i class="fa-brands fa-youtube"></i></a>
+            `;
+          } else if (title === "John Morgan Mullen") {
             socialMediaDiv.innerHTML = `
-                    <a href="https://www.facebook.com/jaykpayleitner "><i class="fa-brands fa-facebook"></i></a>
-                    `;
-          }
-          else if (title === "Josef Tsau") {
+            <a href="https://www.facebook.com/jaykpayleitner "><i class="fa-brands fa-facebook"></i></a>
+            `;
+          } else if (title === "Josef Tsau") {
             socialMediaDiv.innerHTML = `
                     <a href="https://www.facebook.com/people/Dr-Josef-Tsau/100087090805867/"><i class="fa-brands fa-facebook"></i></a>
                     `;
-          }
-          else if (title === "Karen J Roberts") {
+          } else if (title === "Karen J Roberts") {
             socialMediaDiv.innerHTML = `
             <a href="https://www.facebook.com/thelittlebluedog "><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.goodreads.com/author/show/6490683.Karen_J_Roberts "><i class="fa-brands fa-goodreads"></i></a>
                     <a href="https://www.instagram.com/thelittlebluedog/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.twitter.com/KRoberts_Author"><i class="fa-brands fa-x-twitter"></i></a>
                     `;
-          }
-          else if (title === "Kathy Bornino") {
+          } else if (title === "Kathy Bornino") {
             socialMediaDiv.innerHTML = `
             <a href=" https://kathybornino.com/ "><i class="fa-solid fa-globe"></i></a>
             <a href="https://www.facebook.com/people/Kathy-Bornino-MA-Past-Life-Regression-Therapist/61554828613011/"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://twitter.com/healingtraveler "><i class="fa-brands fa-x-twitter"></i></a>
-                    `;
-          }
-          else if (title === "Leonard H. Roberts") {
+            `;
+          } else if (title === "Leonard H. Roberts") {
             socialMediaDiv.innerHTML = `
                      <a href=" https://www.leonardhroberts.com/ "><i class="fa-solid fa-globe"></i></a>
                     <a href=" https://www.facebook.com/people/Leonard-H-Roberts/61550725092944/ "><i class="fa-brands fa-facebook"></i></a>
                     <a href=" https://www.instagram.com/leonardhrobertsauthor/ "><i class="fa-brands fa-instagram"></i></a>
                     `;
-          }
-          else if (title === "Louis Garbis") {
+          } else if (title === "Louis Garbis") {
             socialMediaDiv.innerHTML = `
                      <a href="https://gantecpublishing.com/louis-garbis/ "><i class="fa-solid fa-globe"></i></a>
                     <a href="https://www.facebook.com/louis.garbis.author "><i class="fa-brands fa-facebook"></i></a>
-                    `; }
-          else if (title === "Lynda Vialet") {
+                    `;
+          // } else if (title === "Lynda Vialet") {
+          //   socialMediaDiv.innerHTML = `
+          //   <a href="#"><i class="fa-solid fa-globe"></i></a>
+          //   <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          //   <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          //   <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          //   `;
+          } else if (title === "Marc Casciani") {
             socialMediaDiv.innerHTML = `
-                     <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    `; }
-          else if (title === "Marc Casciani") {
+                      <a href="https://mindwolves.com/ "><i class="fa-solid fa-globe"></i></a>
+                      <a href="https://www.linkedin.com/in/coach-c "><i class="fa-brands fa-linkedin"></i></a>
+                      <a href="https://twitter.com/MarcCasciani"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="https://www.youtube.com/channel/UCjRJUTCpEtZfUO1OoQI5B8w "><i class="fa-brands fa-youtube"></i></a>
+                      `;
+          } else if (title === "Dr Meena Chintapalli") {
             socialMediaDiv.innerHTML = `
-                     <a href="https://mindwolves.com/ "><i class="fa-solid fa-globe"></i></a>
-                    <a href="https://www.linkedin.com/in/coach-c "><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/MarcCasciani"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/channel/UCjRJUTCpEtZfUO1OoQI5B8w "><i class="fa-brands fa-youtube"></i></a>
-                    `; }
-
+                        <a href="https://www.linkedin.com/in/meenakshi-chintapalli-7b568321/ "><i class="fa-brands fa-linkedin"></i></a>
+                        `;
+          } else if (title === "Emerich Roth") {
+            socialMediaDiv.innerHTML = `
+                                  <a href="https://emerichfonden.nu/ "><i class="fa-solid fa-globe"></i></a>
+                                  <a href=" https://www.facebook.com/emerich.roth "><i class="fa-brands fa-facebook"></i></a>
+                                  `;
+          // } else if (title === "J.Price") {
+          //   socialMediaDiv.innerHTML = `
+          //                 <a href="#"><i class="fa-solid fa-globe"></i></a>
+          //           <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          //           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          //           <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          //                         `;
+          } else if (title === "Brandon Iwan") {
+            socialMediaDiv.innerHTML = `
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                 <a href="https://www.facebook.com/people/Brandon-Iwan-Author/61554825851723/"><i class="fa-brands fa-facebook"></i></a>
+                 <a href="https://www.goodreads.com/author/show/47832984.Brandon_Iwan"><i class="fa-brands fa-goodreads"></i></a>
+                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                 `;
+          }
 
           detailsDiv.appendChild(socialMediaDiv);
 
@@ -358,60 +389,55 @@
             <img id="book-img" src="/images/books/Enhanced Learning Abilities.png" alt="Lapse">
         </a>
         <div class="book-name">The sift in the backlot</div>`;
-          } else if (title === "Kathryn Cerver") {
+          } else if (title === "Kathryn Cervera") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Who Is It.png">
             <img id="book-img" src="/images/books/Who Is It.png" alt="Lapse">
         </a>
         <div class="book-name">The sift in the backlot</div>`;
           } else if (title === "Courtney Pahlke") {
-            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Life force preserve series 1.png">
-    <img id="book-img" src="/images/books/Life force preserve series 1.png" alt="Life force preserve series 1">
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/( Life Force Preserve ) Anna and the Resurgent of the Precious Blood.png">
+    <img id="book-img" src="/images/books/( Life Force Preserve ) Anna and the Resurgent of the Precious Blood.png" alt="( Life Force Preserve ) Anna and the Resurgent of the Precious Blood">
 </a>
-<div class="book-name">Life force preserve series 1</div>`;
+<div class="book-name">Life Force Preserve : Anna and the Resurgent of the Precious Blood</div>`;
             // Additionally, show bookImgDiv2
             bookImgDiv2.style.display = "block";
             bookImgDiv2.innerHTML = `
                     
-                    <a href="/books_info.html?bookImage=/images/books/Life force preserve series 2.png">
-    <img id="book-img" src="/images/books/Life force preserve series 2.png" alt="Life force preserve series 2">
+                    <a href="/books_info.html?bookImage=/images/books/( Life Force Preserve ) West End William.png">
+    <img id="book-img" src="/images/books/( Life Force Preserve ) West End William.png" alt="( Life Force Preserve ) West End William">
 </a>
-<div class="book-name">Life force preserve series 2</div>`;
+<div class="book-name">Life Force Preserve : West End William</div>`;
           } else if (title === "Curse Queen") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Little Black Book of Nasty Spells.png">
             <img id="book-img" src="/images/books/The Little Black Book of Nasty Spells.png" alt="Little Black Book">
         </a>
-        <div class="book-name">The sift in the backlot</div>`;
+        <div class="book-name">The Little Black Book of Nasty Spells</div>`;
           } else if (title === "Deanna King") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Gracie's Stories.png">
             <img id="book-img" src="/images/books/Gracie's Stories.png" alt="Gracie's Stories">
         </a>
         <div class="book-name">Gracie's Stories</div>`;
-          }
-           else if (title === "Devaughn Lily") {
+          } else if (title === "Devaughn Lily") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Magnificent Life of Gravvy Brown.png">
              <img id="book-img" src="/images/books/The Magnificent Life of Gravvy Brown.png" alt="he Magnificent Life of Gravvy Brown">
          </a>
          <div class="book-name">The Magnificent Life of Gravvy Brown</div>`;
-          }
-           else if (title === "Gracelyn Keys") {
+          } else if (title === "Gracelyn Keys") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Who's There Bear.png">
             <img id="book-img" src="/images/books/Who's There Bear.png" alt="Who's There Bear">
          </a>
          <div class="book-name">Who's There Bear</div>`;
-          }
-          else if (title === "Jason Ranieri") {
-             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Polka Dots and Politics.png">
+          } else if (title === "Jason Ranieri") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Polka Dots and Politics.png">
              <img id="book-img" src="/images/books/Polka Dots and Politics.png" alt="Polka Dots and Politicsr">
          </a>
          <div class="book-name">Polka Dots and Politicsr</div>`;
-          }
-          else if (title === "Jay payleitner") {
+          } else if (title === "Jay payleitner") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Point Line Plane Eternity.png">
              <img id="book-img" src="/images/books/Point Line Plane Eternity.png" alt="Point Line Plane Eternity">
          </a>
          <div class="book-name">Point Line Plane Eternity</div>`;
-          }
-          else if (title === "John Morgan Mullen") {
+          } else if (title === "John Morgan Mullen") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Road Map To Tomorrow.png">
     <img id="book-img" src="/images/books/Road Map To Tomorrow.png" alt="Road Map To Tomorrow">
 </a>
@@ -424,14 +450,12 @@
     <img id="book-img" src="/images/books/Straight from the Heart.png" alt="Straight from the Heart">
 </a>
 <div class="book-name">Straight from the Heart</div>`;
-          }
-          else if (title === "Josef Tsau") {
+          } else if (title === "Josef Tsau") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/One-Matter Nature Science.png">
              <img id="book-img" src="/images/books/One-Matter Nature Science.png" alt="One-Matter Nature Science">
          </a>
          <div class="book-name">One-Matter Nature Science</div>`;
-          }
-          else if (title === "Karen J Roberts") {
+          } else if (title === "Karen J Roberts") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Little Blue Dog.png">
     <img id="book-img" src="/images/books/The Little Blue Dog.png" alt="The Little Blue Dog">
 </a>
@@ -444,49 +468,83 @@
     <img id="book-img" src="/images/books/The Gentle Beagle.png" alt="The Gentle Beagle">
 </a>
 <div class="book-name">The Gentle Beagle</div>`;
- // Additionally, show bookImgDiv2
- bookImgDiv3.style.display = "block";
+            // Additionally, show bookImgDiv2
+            bookImgDiv3.style.display = "block";
             bookImgDiv3.innerHTML = `
                     
                     <a href="/books_info.html?bookImage=/images/books/Terriers Tale Cover.jpg">
     <img id="book-img" src="/images/books/Terriers Tale Cover.jpg" alt="Terriers Tale Cover">
 </a>
 <div class="book-name">Terriers Tale Cover</div>`;
-          }  else if (title === "Kathy Bornino") {
+          } else if (title === "Kathy Bornino") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/A Labyrinth Of LifeTimes.png">
              <img id="book-img" src="/images/books/A Labyrinth Of LifeTimes.png" alt="A Labyrinth Of LifeTimes">
          </a>
          <div class="book-name">A Labyrinth Of LifeTimes</div>`;
-          }
-      
-
-          else if (title === "Leonard H. Roberts") {
+          } else if (title === "Leonard H. Roberts") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Leading With Vision and Heart.png">
              <img id="book-img" src="/images/books/Leading With Vision and Heart.png" alt="Leading With Vision and Heart">
          </a>
          <div class="book-name">Leading With Vision and Heart</div>`;
-          }
-          else if (title === "Louis Garbis") {
+          } else if (title === "Louis Garbis") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/H Zoh Mae (Our Life).png">
              <img id="book-img" src="/images/books/H Zoh Mae (Our Life).png" alt="H Zoh Mae (Our Life)">
          </a>
          <div class="book-name">H Zoh Mae (Our Life)</div>`;
-          }
-          else if (title === "Lynda Vialet") {
+          } else if (title === "Lynda Vialet") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Redemption A Journey from Tragedy to Triumph.png">
              <img id="book-img" src="/images/books/Redemption A Journey from Tragedy to Triumph.png" alt="Redemption A Journey from Tragedy to Triumph">
          </a>
          <div class="book-name">Redemption: A Journey from Tragedy to Triumph</div>`;
-          }
-          else if (title === "Marc Casciani") {
+          } else if (title === "Marc Casciani") {
             bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Craft Your Calling.png">
              <img id="book-img" src="/images/books/Craft Your Calling.png" alt="Craft Your Calling">
          </a>
          <div class="book-name">Craft Your Calling</div>`;
+          } else if (title === "Dr Meena Chintapalli") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Raising a Healthy Child.png">
+             <img id="book-img" src="/images/books/Raising a Healthy Child.png" alt="Raising a Healthy Child">
+         </a>
+         <div class="book-name">Raising a Healthy Child</div>`;
+          } else if (title === "Emerich Roth") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Holocaust.png">
+             <img id="book-img" src="/images/books/The Holocaust.png" alt="The Holocaust">
+         </a>
+         <div class="book-name">The Holocaust</div>`;
+          } else if (title === "J.Price") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Ancient Sauk.png">
+    <img id="book-img" src="/images/books/Ancient Sauk.png" alt="Ancient Sauk">
+</a>
+<div class="book-name">Ancient Sauk...</div>`;
+            // Additionally, show bookImgDiv2
+            bookImgDiv2.style.display = "block";
+            bookImgDiv2.innerHTML = `
+                    
+            <a href="/books_info.html?bookImage=/images/books/River Rock Motorcycle Girl.png">
+    <img id="book-img" src="/images/books/River Rock Motorcycle Girl.png" alt="River Rock Motorcycle Girl">
+</a>
+<div class="book-name">River Rock Motorcycle Girl</div>`;
+            // Additionally, show bookImgDiv2
+            bookImgDiv3.style.display = "block";
+            bookImgDiv3.innerHTML = `
+                    
+              
+    <a href="/books_info.html?bookImage=/images/books/Rock Lake's Stellar Pyramids.png">
+    <img id="book-img" src="/images/books/Rock Lake's Stellar Pyramids.png" alt="Rock Lake's Stellar Pyramids">
+</a>
+<div class="book-name">Terriers Tale Cover</div>`;
           }
-           }
-        
+          else if (title === "Brandon Iwan") {
+            bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Testament in black.png">
+             <img id="book-img" src="/images/books/Testament in black.png" alt="Testament in black">
+         </a>
+         <div class="book-name">Testament in black</div>`;
+          }
+
+        }
       });
+
+      AOS.init();
     </script>
   </body>
 </html>
