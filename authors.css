@@ -242,8 +242,8 @@ background:transparent !important;
 
 .slide-track {
   display: flex;
-  width: calc(220px * 30);
-  animation: scroll 60s linear infinite;
+  width: calc(220px * 44);
+  animation: scroll 100s linear infinite;
 }
 
 .slide {
