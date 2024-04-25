@@ -38,7 +38,7 @@ font-weight: 600 !important;
 }
   .paragraph{
     text-justify: auto !important;
-    font-size:clamp(11px,6vw,14px) !important;
+    font-size:clamp(11px,6vw,15px) !important;
     line-height: 23px;
     /* text-indent: 50px; */
    
@@ -331,11 +331,23 @@ transition: all 0.5s ease-in-out;
 /* ------------------------------media-quary--------------------------------- */
 @media screen and (max-width:680px) {
   .slide {
-    width: 170px;
+    width: 180px !important;
     height: 200px;
     position: relative;
   }
-
+  .slide .img-alt {
+    position: absolute;
+    bottom: 10px;
+    letter-spacing: 0.5px;
+    text-align: center !important;
+    width:125px;
+  font-size: 10px;
+  font-weight: 600;
+    color: #fff;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out ;
+  }
+  
   .item .author-img-div{
     width: 280px;
     height: 320px;
