@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
   { title: "Marc Casciani", image: "/images/Marc Casciani Publishizer Image.jpg"},
   { title: "Dr Meena Chintapalli", image: "/images/Meena Chintapalli LinkedIn Photo.png"},
   { title: "Emerich Roth", image: "/images/Emerich Roth.png"},
-  { title: "J.Price", image: "/images/Male Author.png"},
+  { title: "J.Price", image: "/images/female author.png"},
   { title: "Sally Veillette", image: "/images/Sally Veillette Amazon Picture.png"},  
   { title: "Brandon Iwan", image: "/images/Brandon Iwan.png" },
   { title: "Allen Lowe", image: "/images/Male Author.png" },
@@ -94,19 +94,19 @@ document.addEventListener("DOMContentLoaded", function() {
   { title: "Kathy Stacey", image: "/images/Kathy Stacey.png" },
   { title: "Larry Ventresca", image: "/images/Male Author.png" },
   { title: "M.K. Hoffman", image: "/images/Male Author.png" },
-  // { title: "Maka Sepashvali", image: "/images/Maka Sepashvali.png" },
-  // { title: "Marcus Armantrout", image: "/images/Male Author.png" },
-  // { title: "Margaret Podmore Emery", image: "/images/Margaret Podmore Emery.png" },
-  // { title: "Mark D. Estes", image: "/images/Male Author.png" },
-  // { title: "Mark Reasoner", image: "/images/Mark Reasoner.png" },
-  // { title: "Michelle Murray", image: "/images/Michelle Murray.png" },
-  // { title: "Mirela Kanini", image: "/images/Mirela Kanini.png" },
-  // { title: "Nadia Manu Bernardy", image: "/images/Nadia Manu Bernardy.png" },
-  // { title: "Rose Hale", image: "/images/Rose Hale.png" },
-  // { title: "Stephen Juracka", image: "/images/Stephen Juracka.png" },
-  // { title: "Sweet Sue Kouchis", image: "/images/Sweet Sue Kouchis.png" },
-  // { title: "Teresa Spangler", image: "/images/Teresa Spangler.png" },
-  // { title: "William Mierzejewski", image: "/images/William Mierzejewski.png" },
+  { title: "Maka Sepashvali", image: "/images/Maka Sepashvali.png" },
+  { title: "Marcus Armantrout", image: "/images/Male Author.png" },
+  { title: "Margaret Podmore Emery", image: "/images/Margaret Podmore Emery.png" },
+  { title: "Mark D. Estes", image: "/images/Male Author.png" },
+  { title: "Mark Reasoner", image: "/images/Mark Reasoner.png" },
+  { title: "Michelle Murray", image: "/images/Michelle Murray.png" },
+  { title: "Mirela Kanini", image: "/images/Mirela Kanini.png" },
+  { title: "Nadia Manu Bernardy", image: "/images/Nadia Manu Bernardy.png" },
+  { title: "Rose Hale", image: "/images/Rose Hale.png" },
+  { title: "Stephen Juracka", image: "/images/Stephen Juracka.png" },
+  { title: "Sweet Sue Kouchis", image: "/images/Sweet Sue Kouchis.png" },
+  { title: "Teresa Spangler", image: "/images/Teresa Spangler.png" },
+  { title: "William Mierzejewski", image: "/images/William Mierzejewski.png" },
   
           
 ]
@@ -117,6 +117,7 @@ const itemsPerPage = 9;
   const pagination = document.getElementById("pagination");
   const noItemsMessage = document.getElementById("noItemsMessage");
   const searchInput = document.getElementById("searchInput");
+  const maxVisiblePages = 3; // Maximum number of visible pagination buttons
 
   function showItems(page) {
     const startIndex = (page - 1) * itemsPerPage;
@@ -151,67 +152,99 @@ const itemsPerPage = 9;
     }
   }
 
+
   function updatePaginationButtons() {
-    pagination.innerHTML = ""; // Clear existing pagination buttons
-    const totalPages = Math.ceil(currentItems.length / itemsPerPage);
-    for (let i = 1; i <= totalPages; i++) {
-      const button = document.createElement("button");
-      button.textContent = i;
-      button.addEventListener("click", function() {
-        currentPage = i;
-        showItems(currentPage);
-        updatePaginationButtons();
-      });
-      pagination.appendChild(button);
+  pagination.innerHTML = ""; // Clear existing pagination buttons
+  const totalPages = Math.ceil(currentItems.length / itemsPerPage);
 
-      // Add active class to current page button
-      if (i === currentPage) {
-        button.classList.add("active");
-      }
+  // Add Previous button
+  const prevButton = document.createElement("button");
+  prevButton.textContent = "<";
+  prevButton.addEventListener("click", function () {
+    if (currentPage > 1) {
+      currentPage--;
+      showItems(currentPage);
+      updatePaginationButtons();
     }
+  });
+  pagination.appendChild(prevButton);
 
-    // Add previous button
-    const prevButton = document.createElement("button");
-    prevButton.textContent = "<";
-    prevButton.addEventListener("click", function() {
-      if (currentPage > 1) {
-        currentPage--;
-        showItems(currentPage);
-        updatePaginationButtons();
-      }
+  // Add first page button if necessary
+  if (currentPage > 2) {
+    const firstPageButton = document.createElement("button");
+    firstPageButton.textContent = "1";
+    firstPageButton.addEventListener("click", function () {
+      currentPage = 1;
+      showItems(currentPage);
+      updatePaginationButtons();
     });
-    pagination.prepend(prevButton);
+    pagination.appendChild(firstPageButton);
+  }
 
-    // Add next button
-    const nextButton = document.createElement("button");
-    nextButton.textContent = ">";
-    nextButton.addEventListener("click", function() {
-      if (currentPage < totalPages) {
-        currentPage++;
-        showItems(currentPage);
-        updatePaginationButtons();
-      }
+  // Add ellipsis if necessary
+  if (currentPage > Math.ceil(maxVisiblePages / 2) + 1) {
+    const ellipsis = document.createElement("span");
+    ellipsis.textContent = "...";
+    pagination.appendChild(ellipsis);
+  }
+
+  // Calculate start and end page indices
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+  let endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
+
+  // Adjust startPage if there are not enough pages to show
+  if (endPage - startPage + 1 < maxVisiblePages) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
+
+  // Add page buttons
+  for (let i = startPage; i <= endPage; i++) {
+    const button = document.createElement("button");
+    button.textContent = i;
+    button.addEventListener("click", function () {
+      currentPage = i;
+      showItems(currentPage);
+      updatePaginationButtons();
     });
-    pagination.appendChild(nextButton);
+    pagination.appendChild(button);
 
-    // Disable previous button if on the first page
-    if (currentPage === 1) {
-      prevButton.disabled = true;
-    }
-
-    // Disable next button if on the last page
-    if (currentPage === totalPages) {
-      nextButton.disabled = true;
+    // Add active class to current page button
+    if (i === currentPage) {
+      button.classList.add("active");
     }
   }
 
-  function filterItems(searchQuery) {
-    currentItems = items.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    showItems(1);
-    updatePaginationButtons();
+  // Add ellipsis if necessary
+  if (currentPage < totalPages - Math.floor(maxVisiblePages / 2)) {
+    const ellipsis = document.createElement("span");
+    ellipsis.textContent = "...";
+    pagination.appendChild(ellipsis);
   }
+
+  // Add last page button if the current page is not within the last two pages
+  if (currentPage < totalPages - 1 && totalPages > 1) {
+    const lastPageButton = document.createElement("button");
+    lastPageButton.textContent = totalPages;
+    lastPageButton.addEventListener("click", function () {
+      currentPage = totalPages;
+      showItems(currentPage);
+      updatePaginationButtons();
+    });
+    pagination.appendChild(lastPageButton);
+  }
+
+  // Add Next button
+  const nextButton = document.createElement("button");
+  nextButton.textContent = ">";
+  nextButton.addEventListener("click", function () {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showItems(currentPage);
+      updatePaginationButtons();
+    }
+  });
+  pagination.appendChild(nextButton);
+}
 
   function handleSearch() {
     const searchQuery = searchInput.value.trim();
@@ -225,6 +258,7 @@ const itemsPerPage = 9;
     handleSearch();
   });
 });
+
 
 AOS.init();
 </script>
