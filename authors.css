@@ -58,6 +58,7 @@ font-weight: 600 !important;
   }
   
   .pagination button{
+
     background:var(--primary-light);
     border: none;
     min-width: 35px;
@@ -347,6 +348,9 @@ transition: all 0.5s ease-in-out;
     visibility: hidden;
     transition: opacity 0.5s ease-in-out ;
   }
+  .pagination button{
+    margin-top: 10px !important;
+  }
   
   .item .author-img-div{
     width: 280px;
@@ -399,9 +403,4 @@ transition: all 0.5s ease-in-out;
 text-align: center !important;
 
  }
-}
-@media screen and (min-width:680px) {
-  #authorInfo .author-description{
-    width: 650px !important;
-   }
 }
