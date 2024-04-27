@@ -336,12 +336,13 @@ transition: all 0.5s ease-in-out;
     height: 200px;
     position: relative;
   }
+
   .slide .img-alt {
     position: absolute;
     bottom: 10px;
     letter-spacing: 0.5px;
     text-align: center !important;
-    width:125px;
+    width:100% !important;
   font-size: 10px;
   font-weight: 600;
     color: #fff;
@@ -359,7 +360,7 @@ transition: all 0.5s ease-in-out;
   }
   .slide-track {
     display: flex;
-    width: calc(170px * 30);
+    width: calc(180px * 44);
     animation: scroll 53s linear infinite;
   }
   .item ,.home-authors {
@@ -396,6 +397,12 @@ transition: all 0.5s ease-in-out;
     border-radius: 300px !important;
     
 }
+.slide-track {
+  /* display: flex; */
+  width: calc(180px * 46);
+  animation: scroll 53s linear infinite;
+}
+
  }
 
 @media screen and (max-width:1200px) {
