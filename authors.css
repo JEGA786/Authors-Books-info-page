@@ -329,6 +329,16 @@ transition: all 0.5s ease-in-out;
  .book-img-2,.book-img-3{
    display: none; /* Hide bookImgDiv2 by default */
  }
+ .author-book-img {
+  width: 289px !important;
+  height: 448px;
+  border-radius: 5px;
+}
+.author-book-img img {
+  border-radius: 5px;
+  width: 100%;
+  object-fit: cover !important;
+}
 /* ------------------------------media-quary--------------------------------- */
 @media screen and (max-width:680px) {
   .slide {

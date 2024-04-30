@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Title Pagination with Search</title>
+<title>Authors Home Page</title>
 <link rel="stylesheet" href="/authors.css">
 <link
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -31,14 +31,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     data-aos-duration="2000" class="d-flex heading justify-content-lg-end justify-content-center col-lg-6 col-md-6 col-12">Our Authors</h4>
     <div data-aos="fade-left"
     data-aos-duration="2000" class="search-div d-flex  justify-content-lg-end justify-content-center align-items-center col-lg-5 col-md-5 col-12 ">
-      <input class="" type="text" id="searchInput" placeholder="Search...">
+      <input class="" type="text" id="searchInput" placeholder="Search Author Name...">
     </div>
   </div>
-  <div data-aos="fade-up"
+<div data-aos="fade-up"
   data-aos-duration="2000" class="item-container mt-4 d-flex justify-content-around" id="itemContainer">
     <!-- Titles, images, and buttons will be dynamically added here -->
   </div>
-  <div class="no-items text-center text-danger" id="noItemsMessage" style="display: none;">Please Enter Our Correct Author name
+  <div class="no-items text-center text-danger" id="noItemsMessage" style="display: none;"> Please Enter a Correct Author Name
   </div>
 </div>
 
@@ -247,8 +247,18 @@ const itemsPerPage = 9;
 }
 
   function handleSearch() {
-    const searchQuery = searchInput.value.trim();
-    filterItems(searchQuery);
+    const searchQuery = searchInput.value.trim().toLowerCase();
+    const filteredItems = items.filter(item =>
+      item.title.toLowerCase().includes(searchQuery)
+    );
+    currentItems = filteredItems;
+    showItems(1); // Reset pagination to first page
+    updatePaginationButtons(); // Update pagination buttons based on filtered items
+    if (filteredItems.length === 0) {
+      noItemsMessage.style.display = "block";
+    } else {
+      noItemsMessage.style.display = "none";
+    }
   }
 
   showItems(currentPage);
