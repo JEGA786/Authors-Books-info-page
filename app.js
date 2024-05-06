@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { title: "Joseph J Allen", image: "/images/Joseph J Allen.png" },
     { title: "Judy Young", image: "/images/Judy Young.png" },
     { title: "Kathy Stacey", image: "/images/Kathy Stacey.png" },
-    { title: "Larry Ventresca", image: "/images/Male Author.png" },
+    { title: "Larry Ventresca", image: "/images/Larry Ventresca.png" },
     { title: "M.K. Hoffman", image: "/images/Male Author.png" },
     { title: "Maka Sepashvali", image: "/images/Maka Sepashvali.png" },
     { title: "Marcus Armantrout", image: "/images/Male Author.png" },
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { title: "Mark Reasoner", image: "/images/Mark Reasoner.png" },
     { title: "Michelle Murray", image: "/images/Michelle Murray.png" },
     { title: "Mirela Kanini", image: "/images/Mirela Kanini.png" },
-    { title: "Nadia Manu Bernardy", image: "/images/Nadia Manu Bernardy.png" },
+    { title: "Nadia Mau Bernardy", image: "/images/Nadia Mau Bernardy.png" },
     { title: "Rose Hale", image: "/images/Rose Hale.png" },
     { title: "Stephen Juracka", image: "/images/Stephen Juracka.png" },
     { title: "Sweet Sue Kouchis", image: "/images/Sweet Sue Kouchis.png" },
@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "<p class=''>Kanini is married and has two children. She lives in a northern Suburb of Chicago, Illinois.</p>",
         
         
-          "Nadia Manu Bernardy":
+          "Nadia Mau Bernardy":
             "<p class=''>Nadia Mau Bernardy is a Spiritual Life Coach, intuitive business mentor, and writer based in Maui, Hawaii. She graduated with a Bachelor of Arts Degree in Graphic Design, Web Design, and Marketing from the Southwest University of Visual Arts in Albuquerque, NM in December of 2007. After graduating she helped grow an unknown tech startup into an international brand, all while working from her laptop in Hawaii.</p>"+
             "<p class=''>Nadia now helps women and men go from career burnout to soul-led lifestyle through life coaching, online courses, and workshops. When she is not coaching, she loves to explore her island home with her husband and daughter.</p>",
         
@@ -724,7 +724,7 @@ authorBookHeadingDiv.textContent = title+"'s" + " Book"; // Hide the heading for
         socialMediaDiv.innerHTML = `
             
              <a href="https://www.facebook.com/people/World-Space-League/100063649852321/ "><i class="fa-brands fa-facebook"></i></a>
-             <a href="https://www.instagram.com/throughtheeyesofblue/ "><i class="fa-brands fa-twitter"></i></a>
+             <a href="https://twitter.com/rahbleza"><i class="fa-brands fa-twitter"></i></a>
              `;
       }
       else if (title === "Debbie Stevens") {
@@ -732,7 +732,7 @@ authorBookHeadingDiv.textContent = title+"'s" + " Book"; // Hide the heading for
             
              <a href="https://debbiestevensauthor.wordpress.com/"><i class=" fa-solid fa-globe"></i></a>
              <a href="https://www.facebook.com/MyFamilyCookbookSeries "><i class="fa-brands fa-facebook"></i></a>
-             <a href="https://www.instagram.com/ladyrd7297/"><i class="fa-brands fa-twitter"></i></a>
+             <a href="https://www.instagram.com/ladyrd7297/"><i class="fa-brands fa-instagram"></i></a>
              <a href="https://www.pinterest.com/ladyrd7297/"><i class="fa-brands fa-pinterest"></i></a>
              `;
       }
@@ -775,13 +775,12 @@ authorBookHeadingDiv.textContent = title+"'s" + " Book"; // Hide the heading for
         }
         else if (title === "Mirela Kanini") {
         socialMediaDiv.innerHTML = `
-        <a href="https://www.simpleaccentreduction.com/ "><i class="fa-solid fa-globe"></i></a>
         <a href=" https://www.goodreads.com/author/show/22133537.Mirela_Kanini"><i class="fa-brands fa-goodreads"></i></a>
         <a href="https://www.facebook.com/people/Mirela-Kanini/100063517848233/"><i class="fa-brands  fa-facebook"></i></a>
         <a href="https://www.instagram.com/mirela_kanini/"><i class="fa-brands fa-instagram"></i></a>
        `;
         }
-        else if (title === "Nadia Manu Bernardy") {
+        else if (title === "Nadia Mau Bernardy") {
         socialMediaDiv.innerHTML = `
         <a href="https://nadiabernardy.com/"><i class="fa-solid fa-globe"></i></a>
         <a href="https://www.goodreads.com/author/show/40767364.Nadia_Mau_Bernardy "><i class="fa-brands fa-goodreads"></i></a>
@@ -1127,17 +1126,17 @@ authorBookHeadingDiv.textContent = title+"'s" + " Book"; // Hide the heading for
            <div class="book-name">My Sister the Werewolf</div>`;
             }
             else if (title === "Larry Ventresca") {
-              bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Rant.png">
+              bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Call Up Put Down.png">
                <img id="book-img" src="/images/books/Call Up Put Down.png" alt="Call Up Put Down">
            </a>
            <div class="book-name">Call Up Put Down</div>`;
             }
-            else if (title === "M.K. Hoffman") {
+           else if (title === "M.K. Hoffman") {
               bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Rant.png">
                <img id="book-img" src="/images/books/Rant.png" alt="Rant">
            </a>
            <div class="book-name">Rant</div>`;
-            }
+            } 
             else if (title === "Maka Sepashvali") {
               bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Where is the Letter from My Friend.png">
 <img id="book-img" src="/images/books/Where is the Letter from My Friend.png" alt="Where is the Letter from My Friend">
@@ -1188,10 +1187,10 @@ authorBookHeadingDiv.textContent = title+"'s" + " Book"; // Hide the heading for
 }
 
 else if (title === "Michelle Murray") {
-bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/Michelle Murray.png">
- <img id="book-img" src="/images/books/Michelle Murray.png" alt="Michelle Murray">
+bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Dream Walker.png">
+ <img id="book-img" src="/images/books/The Dream Walker.png" alt="The Dream Walker">
 </a>
-<div class="book-name">Michelle Murray</div>`;
+<div class="book-name">The Dream Walker</div>`;
 }
 else if (title ==="Mirela Kanini") {
 bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The Sins of Mrs.Ema.png">
@@ -1199,7 +1198,7 @@ bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/The S
 </a>
 <div class="book-name">The Sins of Mrs.Ema</div>`;
 }
-else if (title ==="Nadia Manu Bernardy") {
+else if (title ==="Nadia Mau Bernardy") {
 bookImgDiv1.innerHTML = `<a href="/books_info.html?bookImage=/images/books/But First Dream Bigger.png">
  <img id="book-img" src="/images/books/But First Dream Bigger.png" alt="But First Dream Bigger">
 </a>
@@ -1765,13 +1764,14 @@ document.addEventListener("DOMContentLoaded", function() {
             ];
             description ="<span class='mt-2 fs-5 fw-medium'>A Tail of Enduring Love"+
              "<p class=''>Ellie and Blue have been running their entire lives. An internationally recognized ultra-endurance athlete, Ellie has competed in the world’s most difficult races with her faithful canine companion Blue never far from her side. Beyond running, they’ve had to navigate life’s most daunting challenges. However, locked behind Blue’s soulful eyes is a secret a secret that will reveal the truth about Ellie and Blue that will change their lives forever.</p>"+
-              "<p class=''>A timeless story exploring the depths of love, loyalty, and perseverance. Laugh and cry as you follow Ellie and her dog, Blue, discover that sometimes self-discovery, resilience, renewal, and redemption come from the most unlikely and unexpected places.</p>"+
+             "<p class=''>A timeless story exploring the depths of love, loyalty, and perseverance. Laugh and cry as you follow Ellie and her dog, Blue, discover that sometimes self-discovery, resilience, renewal, and redemption come from the most unlikely and unexpected places.</p>"+
              "<p class=''>This contemporary romance novel is a cross between Born to Run, The Secret, and A Dog’s Purpose.</p>"+
              "<p class='mt-2 fs-5 fw-medium'>Editorial Reviews </p>"+
              "<p class=''>“Catherine Matsalla's Through the Eyes of Blue is a compelling drama that touches upon the timeless themes of perseverance and redemption.” <span class='fw-medium fst-italic'> —  IndieReader</span> </p>"+
              "<p class=''>“Emotionally written, with remarkable depth to a canine character, Through the Eyes of Blue draws the reader in and makes them love Blue - not just through his actions and presence in Ellie's life, but through the utter devotion and loyalty he exudes. The examination of the unique attachment that is formed between a dog and a person is wonderfully done, and anyone who considers themselves a dog person will find themselves emotionally invested in this story.” <span class='fw-medium fst-italic'> —  ManyBooks</span> </p>"+
              "<p class='mt-2 fs-5 fw-medium'>Awards & Accolades <i class='fa-solid fa-award  fs-5'></i></p>"+
-            "<p class='mt-2'>IndieReader's Best Reviewed Books of August 2021</p>"}
+            "<p class='mt-2'>IndieReader's Best Reviewed Books of August 2021</p>"
+          }
         
             else if (imageSrc.includes("Primeblades")) {
             buttonInfo = [
@@ -1788,7 +1788,6 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonInfo = [
                 
               { label: "Amazon", link: " https://www.amazon.com/World-Space-League-Presents-Kombaat-ebook/dp/B086V3MQHQ" },
-              { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/i-drive-charring-cross/1131479411?ean=9781545743430  " },
               { label: "eBooks2go", link: "https://www.ebooks2go.com/the-world-space-league-presents-kombaat  " },
               { label: "Google Play", link: "https://play.google.com/store/books/details/Daniel_Rodriquez_World_Space_League_Presents_Komba?id=nPfZDwAAQBAJ" },
               { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/the-world-space-league-presents-kombaat-b-e" },
@@ -1798,11 +1797,11 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (imageSrc.includes("Meditation Education")) {
             buttonInfo = [
                 
-              { label: "Amazon", link: " https://www.amazon.com/World-Space-League-Presents-Kombaat-ebook/dp/B086V3MQHQ" },
-              { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/i-drive-charring-cross/1131479411?ean=9781545743430  " },
-              { label: "eBooks2go", link: "https://www.ebooks2go.com/the-world-space-league-presents-kombaat  " },
-              { label: "Google Play", link: "https://play.google.com/store/books/details/Daniel_Rodriquez_World_Space_League_Presents_Komba?id=nPfZDwAAQBAJ" },
-              { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/the-world-space-league-presents-kombaat-b-e" },
+              { label: "Apple", link: " https://books.apple.com/us/book/meditation-education/id1493902987               " },
+              // { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/i-drive-charring-cross/1131479411?ean=9781545743430  " },
+              { label: "eBooks2go", link: "https://www.ebooks2go.com/meditation-education" },
+              { label: "Google Play", link: "https://play.google.com/store/books/details/Deb_Huntley_Meditation_Education?id=zhnIDwAAQBAJ" },
+              { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/meditation-education" },
             ];
             description ="A critique on meditation for everyone, and teaching children mindfulness. "}
         
@@ -1844,7 +1843,7 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (imageSrc.includes("Romantic Tales from Missouri")) {
             buttonInfo = [
             
-            { label: "Apple", link: "https://play.google.com/store/books/details/Jake_Townsend_Romantic_Tales_from_Missouri?id=9EzODwAAQBAJ" },
+            { label: "Apple", link: "https://books.apple.com/us/book/romantic-tales-from-missouri/id1497842308" },
             { label: "Google Play", link: "https://play.google.com/store/books/details/Jake_Townsend_Romantic_Tales_from_Missouri?id=9EzODwAAQBAJ" },
             { label: "eBooks2go", link: "https://www.ebooks2go.com/romantic-tales-from-missouri " },
             { label: "Kobo", link: " https://www.kobo.com/us/en/ebook/romantic-tales-from-missouri  " },
@@ -1896,7 +1895,7 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (imageSrc.includes("Call Up Put Down")) {
             buttonInfo = [
             
-                { label: "Apple", link: " https://books.apple.com/us/book/my-sister-the-werewolf/id1340193637" },
+                { label: "Apple", link: " https://books.apple.com/us/book/call-up-put-down/id1014515442                " },
                 { label: "Google Play", link: "https://play.google.com/store/books/details/Larry_Ventresca_Call_Up_Put_Down?id=gjYJCgAAQBAJ " },
                 { label: "eBooks2go", link: " https://www.ebooks2go.com/call-up-put-down " },
                 { label: "kobo", link: " https://www.kobo.com/us/en/ebook/call-up-put-down  " },
@@ -1908,7 +1907,10 @@ document.addEventListener("DOMContentLoaded", function() {
          
                 { label: "Amazon", link: "https://www.amazon.com/Rant-M-K-Hoffman/dp/1545754225 " },
                 { label: "Apple", link: " https://books.apple.com/us/book/rant/id1588346631 " },
-                { label: "Barnes & Noble", link: " https://www.kobo.com/us/en/ebook/call-up-put-down  " },
+                { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/rant-m-k-hoffman/1143468124?ean=9781545754221" },   
+                { label: "Google Play", link: "https://play.google.com/store/books/details/M_K_Hoffman_Rant?id=75lFEAAAQBAJ" },
+                { label: "eBooks2go", link: "https://www.ebooks2go.com/rant-hoffman" },
+                { label: "kobo", link: "https://www.kobo.com/us/en/ebook/rant-12" },
         ];
             description ="The true story of one individual's campaign against the big banks of America in an attempt to save the world's economy."+
              "<p class=''>Throughout world history, empires have collapsed due to widespread corruption and lack of accountability; unfortunately, Hoffman came to realize that America could follow this trend, but he remains determined to prevent that from ever happening.</p>"+
@@ -2006,7 +2008,7 @@ document.addEventListener("DOMContentLoaded", function() {
              "<p class=''>Michelle will face her own problems. As she grows into a beautiful young woman, she'll face harassment from older boys and an incident where she's touched inappropriately. She'll navigate these in convincing style with and without Corey's help.</p>"+
              "<p class=''>While working on the ring, Corey and Michelle join Officer Brenda Shelton to trace leads and find new information. Their efforts uncover a person who came through the area about fifty years ago and then disappeared. This man wasn't a good person and ended up in a lot of trouble finally being tried for raping the young woman who became Sheriff Wingate's mother.Everything comes together over the Thanksgiving Holiday when the kids are lured into a confrontation with last person involved in the dead man's disappearance. They barely make it out alive, thanks to some quick thinking and good luck, and learn the true story of when and how the man ended up at the bottom of Lake Cyrus. They also find out who he was and the connection to Sheriff Wingate.</p>"
             }   
-            else if (imageSrc.includes("Michelle Murray")) {
+            else if (imageSrc.includes("The Dream Walker")) {
             buttonInfo = [
             
             { label: "Apple", link: "https://books.apple.com/us/book/the-dream-walker-land-of-mystica-series-volume-1/id1453144059 " },
@@ -2019,10 +2021,12 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (imageSrc.includes("The Sins of Mrs.Ema")) {
             buttonInfo = [
             
-            { label: "Apple", link: "https://books.apple.com/us/book/the-dream-walker-land-of-mystica-series-volume-1/id1453144059 " },
-            { label: "Google Play", link: "https://play.google.com/store/books/details/Michelle_Murray_The_Dream_Walker_Land_of_Mystica_S?id=Uh2IDwAAQBAJ" },
-            { label: "eBooks2go", link: " https://www.ebooks2go.com/the-dream-walker-land-of-mystica-series-volume-1" },
-            { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/the-dream-walker-land-of-mystica-series-volume-1 " },
+            { label: "Amazon", link: " https://www.amazon.com/Sins-Mrs-Ema-Mirela-Kanini/dp/1545754713 " },
+            { label: "Apple", link: "https://books.apple.com/us/book/the-sins-of-mrs-ema/id1601184257?ls=1" },
+            { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/the-sins-of-mrs-ema-mirela-kanini/1140811367?ean=9781545754719 " },
+            { label: "Google Play", link: "https://play.google.com/store/books/details/Mirela_Kanini_The_Sins_of_Mrs_Ema?id=aalVEAAAQBAJ" },
+            { label: "eBooks2go", link: "https://www.ebooks2go.com/the-sins-of-mrs-ema " },
+            { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/the-sins-of-mrs-ema" },
         ];
         description ="The Sins of Mrs. Ema is a provocative novel by author Mirela Kanini about true happiness in life. Is it money or love?"+
              "<p class=''>How do we balance having a devoted husband and then finding the right person at the wrong time?</p>"+
@@ -2040,7 +2044,7 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonInfo = [
             
             { label: "Amazon", link: "https://www.amazon.com/But-First-Dream-Bigger-Potential/dp/1545756740" },
-            { label: "Apple", link: "https://www.amazon.com/But-First-Dream-Bigger-Potential/dp/1545756740  " },
+            { label: "Apple", link: "https://books.apple.com/us/book/but-first-dream-bigger/id6450740783 " },
         { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/but-first-dream-bigger-nadia-mau-bernardy/1143786512?ean=9781545756744 " },
         { label: "Google Play", link: "https://play.google.com/store/books/details/Nadia_Mau_Bernardy_But_First_Dream_Bigger?id=8fjHEAAAQBAJ " },
         { label: "eBooks2go", link: "https://www.ebooks2go.com/but-first-dream-bigger" },
@@ -2080,10 +2084,12 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (imageSrc.includes("Get In The Sales Game")) {
             buttonInfo = [
             
-            { label: "Amazon", link: "https://www.amazon.com/All-That-Am-Entrepreneurs-Dreaming/dp/179903576X" },
-            { label: "Apple", link: "https://books.apple.com/us/book/all-that-i-am-now-that-i-know/id1500523908" },
-            { label: "Google Play", link: "https://play.google.com/store/books/details/Teresa_Spangler_All_That_I_Am_Now_That_I_Know?id=yajSDwAAQBAJ" },
-            { label: "eBooks2go", link: "https://www.ebooks2go.com/all-that-i-am-now-that-i-know" },
+            { label: "Amazon", link: " https://www.amazon.com/Get-Sales-Game-Playbook-Winning/dp/1545754322             " },
+            { label: "Apple", link: "https://books.apple.com/us/book/get-in-the-sales-game-the-playbook-for-winning-in/id1585608289" },
+            { label: "Barnes & Noble", link: "https://www.barnesandnoble.com/w/get-in-the-sales-game-sweet-sue-kouchis/1140157211?ean=9781545754320" },
+            { label: "Google Play", link: "https://play.google.com/store/books/details/Sweet_Sue_Kouchis_Get_in_the_Sales_Game_The_Playbo?id=jJdCEAAAQBAJ" },
+            { label: "eBooks2go", link: " https://www.ebooks2go.com/get-in-the-sales-game " },
+            { label: "Kobo", link: "https://www.kobo.com/us/en/ebook/get-in-the-sales-game-the-playbook-for-winning-in-sales-when-the-game-has-changed " },
         ];
         description ="Get in the Sales Game is a groundbreaking one-of-a-kind sales book that can help you close more business. It talks about tips and tricks in selling in the new sales environment. March 2020 was a pivotal moment of new change in the world of sales. With so many countries and states shut down by stay-at-home orders, our normal way of sales-life was rocked to its very core. Sales professionals who used face-to-face, handshake, ground game, and give-a-hug styles of selling had to power pivot to stay in the game."+
         "<p class='mt-2 fs-5 fw-medium'>Awards & Accolades <i class='fa-solid fa-award  fs-5'></i></p>"+
@@ -2121,8 +2127,9 @@ document.addEventListener("DOMContentLoaded", function() {
         description ="Liam, a 10-year-old boy, and Boo, an 8-year-old girl, are two kids from Chicago, Illinois sleeping comfortably in their family’s vacation home in Iron River, Michigan. Their vacation home, far from the big city lights and crowded, bustling streets, borders the Ottawa National Forest and rests peacefully a few yards away from the vibrant waters of Sunset Valley Lake. Tonight, the cool air from the lake mixes with the heat of the day and creates a dense fog while the Sturgeon Moon rises in the twilight."+
         "<p class=''>Suddenly, Liam is startled by a chilling howl outside his bedroom window. That’s when Liam sees the beast for the first time. Its terrifying yellow eyes pierce back at him through the darkness.</p>"+
             "<p class='mt-2'>Liam tries to warn his family of what’s out there, but no one believes him. His father assures him that it’s his imagination and the forest is home to black bears and grey wolves. But is the forest and this small summer town harboring a primal evil? How long has this evil plagued this area? Who else is aware of what lurks in the surrounding woods? And how can this beast be stopped before anyone else goes missing? Only Liam, Boo, and their crew of friends can solve this mystery. Follow Liam and Boo in the first installment of the Liam and Boo series, which features our main characters in a thrilling and mysterious adventure.</p>"+
+            "<p class='mt-2 fs-5 fw-medium'>Editorial Reviews </p>"+
             "<p class=''>“The Local Legend of Iron River is a great start to the series and will quickly draw readers into its suspenseful tale. If this first novel is anything to go by, then readers are in for a treat when it comes to the future adventures of Liam and Boo.” <span class='fw-bold fst-italic'> — ManyBooks</span> </p>"+
-            "<p class=''>“The Local Legend of Iron River is an engaging story. The last few chapters are especially nail-biting as the author doesn't pull any punches regarding casualties.” <span class='fw-bold fst-italic'> — ManyBooks</span> </p>"
+            "<p class=''>“The Local Legend of Iron River is an engaging story. The last few chapters are especially nail-biting as the author doesn't pull any punches regarding casualties.” <span class='fw-bold fst-italic'> — ManyBooks</span> </p>"+
             "<p class='mt-2 fs-5 fw-medium'>Awards & Accolades<i class='fa-solid fa-award  fs-5'></i></p>"+
             "<p class='mt-2'>Amazon Hot New Release June 2023</p>"+
             "<p class='mt-2'>Named One of Bookstr’s 8 Underrated Werewolf Novels of 2023</p>"
